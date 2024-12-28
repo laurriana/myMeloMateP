@@ -11,9 +11,11 @@ public class Track {
     private int id;
     private String name;
     private String artist;
-    private int playcount;
+    private Integer playcount;
     private String url;
     private String image;
+
+    public Track() {}
 
     public int getId() {
         return id;
@@ -43,7 +45,7 @@ public class Track {
         return playcount;
     }
 
-    public void setPlaycount(int playcount) {
+    public void setPlaycount(Integer playcount) {
         this.playcount = playcount;
     }
 

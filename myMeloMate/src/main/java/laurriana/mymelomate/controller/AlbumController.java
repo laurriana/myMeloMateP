@@ -19,33 +19,33 @@ public class AlbumController {
     AlbumRepository repository;
 
     // get album from id
-    @GetMapping("/getAlbum/{id}")
-    public Album getAlbumById(@PathVariable int id) {
+    @GetMapping("/{id}")
+    public Album getById(@PathVariable int id) {
         return repository.findById(id)
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, String.format("Album with id %d not found", id)));
     }
 
     // get album by name (limit of 1)
-    @GetMapping("/getAlbum")
+    @GetMapping("/byName")
     public Album getAlbumByName(String name) {
         return repository.findAlbumByName(name);
     }
 
     // get most played album
-    @GetMapping("/getTopAlbum")
+    @GetMapping("/mostPlayed")
     public Album getTopAlbum() {
         return repository.findTopByOrderByPlaycountDesc();
     }
 
     // get the least played album
-    @GetMapping("/getBottomAlbum")
+    @GetMapping("/leastPlayed")
     public Album getBottomAlbum() {
-        return repository.findTopByOrderByPlaycountAsc();
+        return repository.findFirstByOrderByPlaycountAsc();
     }
 
     // get top album by artist
-    @GetMapping("/getTopArtistAlbum/{artist}")
-    public Album getTopArtistAlbum(@PathVariable String artist) {
+    @GetMapping("/topByArtist")
+    public Album getTopArtistAlbum(String artist) {
         return repository.findTopByArtistContainingIgnoreCaseOrderByPlaycountDesc(artist);
     }
 
@@ -53,38 +53,38 @@ public class AlbumController {
     /* LIST METHODS
     * keyboard shorcut: getls
     * */
-    @GetMapping("/getAllAlbums")
+    @GetMapping("/all")
     public List<Album> getAllAlbums() {
         return repository.findAll();
     }
 
     // get all albums by a specific playcount
-    @GetMapping("/getAllByPlaycount")
+    @GetMapping("/allByPlaycount")
     public List<Album> getAllByPlaycount(int playcount) {
         return repository.findAlbumsByPlaycount(playcount);
     }
 
     // get all albums with a playcount lower or equal
-    @GetMapping("/getAllPlaycountLower")
+    @GetMapping("/allPlaycountLess")
     public List<Album> getAllPlaycountLower(int playcount) {
         return repository.findAlbumsByPlaycountLessThanEqual(playcount);
     }
 
     // get all albums with a playcount higher or equal
-    @GetMapping("/getAllPlaycountHigher")
+    @GetMapping("/allPlaycountGreater")
     public List<Album> getAllPlaycountHigher(int playcount) {
         return repository.findAlbumsByPlaycountGreaterThanEqual(playcount);
     }
 
     // get all albums by name
-    @GetMapping("/getAllByName")
+    @GetMapping("/allNameContains")
     public List<Album> getByName(String name) {
         return repository.findAlbumsByNameContainsIgnoreCase(name);
     }
 
     // get all albums by artist
-    @GetMapping("/getAllByArtist/{artist}")
-    public List<Album> getAllByArtist(@PathVariable String artist) {
+    @GetMapping("/allByArtist")
+    public List<Album> getAllByArtist(String artist) {
         return repository.findAlbumsByArtistContainsIgnoreCase(artist);
     }
 
