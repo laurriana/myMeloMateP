@@ -12,6 +12,15 @@ public class Artist {
     private String name;
     private String url;
     private String image;
+    private int playcount;
+
+    public int getPlaycount() {
+        return playcount;
+    }
+
+    public void setPlaycount(int playcount) {
+        this.playcount = playcount;
+    }
 
     public int getId() {
         return id;

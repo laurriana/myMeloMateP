@@ -4,18 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b6040b7f-a8ad-427e-a93f-349f351ea350" name="Changes" comment="added controller for albums">
+    <list default="true" id="b6040b7f-a8ad-427e-a93f-349f351ea350" name="Changes" comment="added controller methods for tracks + unforeseen post and delete method :)">
+      <change afterPath="$PROJECT_DIR$/src/main/java/laurriana/mymelomate/WebConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/laurriana/mymelomate/controller/AlbumController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/laurriana/mymelomate/controller/AlbumController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/laurriana/mymelomate/controller/ArtistController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/laurriana/mymelomate/controller/ArtistController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/laurriana/mymelomate/controller/TrackController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/laurriana/mymelomate/controller/TrackController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/laurriana/mymelomate/model/Track.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/laurriana/mymelomate/model/Track.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/laurriana/mymelomate/repository/AlbumRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/laurriana/mymelomate/repository/AlbumRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/laurriana/mymelomate/repository/TrackRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/laurriana/mymelomate/repository/TrackRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/laurriana/mymelomate/controller/AlbumController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/laurriana/mymelomate/controller/AlbumController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/laurriana/mymelomate/model/Artist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/laurriana/mymelomate/model/Artist.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/laurriana/mymelomate/repository/ArtistRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/laurriana/mymelomate/repository/ArtistRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/laurriana/mymelomate/controller/ArtistController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/laurriana/mymelomate/controller/ArtistController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/laurriana/mymelomate/controller/TrackController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/laurriana/mymelomate/controller/TrackController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/laurriana/mymelomate/model/Track.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/laurriana/mymelomate/model/Track.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/laurriana/mymelomate/repository/AlbumRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/laurriana/mymelomate/repository/AlbumRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/laurriana/mymelomate/repository/TrackRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/laurriana/mymelomate/repository/TrackRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/laurriana/mymelomate/model/Artist.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/laurriana/mymelomate/model/Artist.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/laurriana/mymelomate/repository/ArtistRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/laurriana/mymelomate/repository/ArtistRepository.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,6 +123,8 @@
       <workItem from="1735339069995" duration="88000" />
       <workItem from="1735339596933" duration="12021000" />
       <workItem from="1735357420720" duration="1224000" />
+      <workItem from="1735426338223" duration="7217000" />
+      <workItem from="1735504483833" duration="1513000" />
     </task>
     <task id="LOCAL-00001" summary="added controller for albums">
       <option name="closed" value="true" />
@@ -141,7 +142,15 @@
       <option name="project" value="LOCAL" />
       <updated>1735360017939</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="added controller methods for tracks + unforeseen post and delete method :)">
+      <option name="closed" value="true" />
+      <created>1735368980917</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1735368980917</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -152,6 +161,7 @@
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
     <MESSAGE value="added controller for albums" />
-    <option name="LAST_COMMIT_MESSAGE" value="added controller for albums" />
+    <MESSAGE value="added controller methods for tracks + unforeseen post and delete method :)" />
+    <option name="LAST_COMMIT_MESSAGE" value="added controller methods for tracks + unforeseen post and delete method :)" />
   </component>
 </project>

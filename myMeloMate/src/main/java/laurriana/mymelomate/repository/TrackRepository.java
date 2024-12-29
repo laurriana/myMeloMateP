@@ -19,4 +19,9 @@ public interface TrackRepository extends JpaRepository<Track, Integer> {
 
     List<Track> findTracksByNameContainsIgnoreCase(String s);
     List<Track> findTracksByArtistContainsIgnoreCase(String s);
+
+    // find all with order
+    List<Track> findAllByOrderByPlaycountDesc();
+    List<Track> findAllByOrderById();
 }
+

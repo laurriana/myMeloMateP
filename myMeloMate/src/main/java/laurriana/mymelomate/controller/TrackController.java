@@ -1,10 +1,12 @@
 package laurriana.mymelomate.controller;
 
-import laurriana.mymelomate.model.Album;
+import laurriana.mymelomate.model.Artist;
 import laurriana.mymelomate.model.Track;
+import laurriana.mymelomate.repository.ArtistRepository;
 import laurriana.mymelomate.repository.TrackRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
@@ -16,6 +18,8 @@ import java.util.Map;
 public class TrackController {
     @Autowired
     TrackRepository repository;
+    @Autowired
+    private ArtistRepository artistRepository;
 
     // get track by id
     @GetMapping("/{id}")
@@ -77,32 +81,50 @@ public class TrackController {
 
     // demo methods
     @PostMapping("/submit")
-    public String handlePostRequest(@RequestBody Track data) {
-        Track savedTrack = repository.save(data); // Save to database
-        return "Saved track " + savedTrack.getName() + "by " + savedTrack.getArtist() + " with ID " + savedTrack.getId();
+    public ResponseEntity<String> handlePostRequest(@RequestBody Track newTrack) {
+        for (Track track : repository.findAll()) {
+            if (track.getName().equalsIgnoreCase(newTrack.getName()) && track.getArtist().equalsIgnoreCase(newTrack.getArtist())) {
+                return new ResponseEntity<>(String.format("Track “%s” by %s already exists", newTrack.getName(), newTrack.getArtist()), HttpStatus.BAD_REQUEST);
+            } else {
+                repository.save(newTrack);
+
+                // modify playcount for artist
+                Artist artist = artistRepository.findArtistByName(newTrack.getArtist());
+                if (artist != null) {
+                    int currentArtistPlaycount = artist.getPlaycount();
+                    artist.setPlaycount(currentArtistPlaycount + newTrack.getPlaycount());
+                    artistRepository.save(artist);
+                }
+            }
+        }
+        return new ResponseEntity<>(String.format("Successfully saved track “%s” by %s", newTrack.getName(), newTrack.getArtist()), HttpStatus.OK);
     }
 
-//    @PatchMapping("/modify/{id}")
-//    public String handlePatch(@PathVariable int id, @RequestBody Map<String, Track> updates) {
-//        Track track = repository.findById(id).orElseThrow(() -> new RuntimeException(String.format("Track not found with id %d", id)));
-//        updates.forEach((key, value) -> {
-//            switch (key) {
-//                case "name":
-//                    track.setName(value.getName());
-//                    break;
-//                case "artist":
-//                    track.setArtist(value.getArtist());
-//                    break;
-//                case "playcount":
-//                    track.setPlaycount(value.getPlaycount());
-//                default:
-//                    throw new RuntimeException("invalid field: " + key);
-//            }
-//        });
-//
-//        repository.save(track);
-//        return String.format("Saved track %d.", track.getId());
-//    }
+    @PutMapping("/modify")
+    public Track handlePutRequest(@RequestBody Track track) {
+        return repository.save(track);
+    }
+
+    // play track (increment of 1)
+    @PatchMapping("/play/{id}")
+    public ResponseEntity<String> playTrack(@PathVariable int id) {
+        try {
+            Track track = repository.findById(id).orElseThrow(() -> new RuntimeException(String.format("Track with id %d not found", id)));
+            track.setPlaycount(track.getPlaycount() + 1);
+            repository.save(track);
+
+            // increment artist playcount
+            Artist artist = artistRepository.findArtistByName(track.getArtist());
+            int currentArtistPlaycount = artist.getPlaycount();
+            artist.setPlaycount(currentArtistPlaycount + 1);
+            artistRepository.save(artist);
+
+            return new ResponseEntity<>(String.format("Successfully played track of id %d", id), HttpStatus.OK);
+
+        } catch (RuntimeException e) {
+            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
 
     @DeleteMapping("/delete/{id}")
     public String handleDelete(@PathVariable int id) {
