@@ -7,7 +7,7 @@ import java.util.List;
 public interface TrackRepository extends JpaRepository<Track, Integer> {
     Track findTrackByName(String name);
     Track findTopByOrderByPlaycountDesc();
-    Track findFirstByOrderByPlaycountAsc();
+    Track findFirstByOrderByPlaycountAscIdDesc();
     // should get the last one in terms of id
 
     Track findTopByArtistContainsIgnoreCaseOrderByPlaycountDesc(String artist);

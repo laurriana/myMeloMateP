@@ -40,7 +40,7 @@ public class TrackController {
 
     @GetMapping("/leastPlayed")
     public Track getLeastPlayedTrack() {
-        return repository.findFirstByOrderByPlaycountAsc();
+        return repository.findFirstByOrderByPlaycountAscIdDesc();
     }
 
     @GetMapping("/topArtistTrack")
@@ -77,6 +77,17 @@ public class TrackController {
     @GetMapping("/allByArtist")
     public List<Track> getAllByArtist(String artist) {
         return repository.findTracksByArtistContainsIgnoreCase(artist);
+    }
+
+    // order bys
+    @GetMapping("/all/playcount")
+    public List<Track> orderPlaycount() {
+        return repository.findAllByOrderByPlaycountDesc();
+    }
+
+    @GetMapping("/all/id")
+    public List<Track> orderId() {
+        return repository.findAllByOrderById();
     }
 
     // demo methods
@@ -133,6 +144,12 @@ public class TrackController {
         String trackName = track.getName();
         String trackArtist = track.getArtist();
         int trackId = track.getId();
+
+        // delete artist playcount
+        Artist artist = artistRepository.findArtistByName(trackArtist);
+        int artistPlaycount = artist.getPlaycount();
+        artist.setPlaycount(artistPlaycount - track.getPlaycount());
+        artistRepository.save(artist);
 
         repository.deleteById(track.getId());
 

@@ -36,7 +36,7 @@ public class ArtistController {
 
     @GetMapping("/leastPlayed")
     public Artist leastPlayed() {
-        return repository.findFirstByOrderByPlaycountAsc();
+        return repository.findFirstByOrderByPlaycountAscIdDesc();
     }
 
     @GetMapping("/all")
