@@ -4,8 +4,8 @@ on:
   push:
     branches:
       - main
-      paths:
-        - myMeloMate/**  # Trigger only when files in the backend are changed
+    paths:
+      - myMeloMate/**  # Trigger only when files in the backend are changed
 
 jobs:
   build-and-deploy:
