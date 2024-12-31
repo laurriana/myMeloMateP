@@ -23,6 +23,7 @@ jobs:
 
     - name: Run tests
       run: mvn test
+      working-directory: ./myMeloMate
       env:
         SPRING_DATASOURCE_URL: ${{ secrets.SPRING_DATASOURCE_URL }}
         SPRING_DATASOURCE_USERNAME: ${{ secrets.SPRING_DATASOURCE_USERNAME }}
@@ -30,7 +31,7 @@ jobs:
 
     - name: Build Backend with Maven
       run: |
-        cd myMeloMate  # Navigate to the backend folder
+        cd ./myMeloMate  # Navigate to the backend folder
         mvn clean package
 
     - name: Deploy to Raspberry Pi
