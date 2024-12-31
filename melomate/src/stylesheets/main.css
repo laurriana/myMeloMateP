@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&family=MuseoModerno:ital,wght@0,100..900;1,100..900&family=Parkinsans:wght@300..800&display=swap');
+
+body {
+    font-family: "Didact Gothic", Arial, Helvetica, sans-serif !important;
+}
+
+/* navigation bar */
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    display: inline;
+    padding: 10px;
+}

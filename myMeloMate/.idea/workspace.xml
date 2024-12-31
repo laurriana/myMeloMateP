@@ -5,18 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b6040b7f-a8ad-427e-a93f-349f351ea350" name="Changes" comment="added cors mapping config file">
+      <change beforePath="$PROJECT_DIR$/../melomate/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../melomate/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../melomate/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../melomate/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../melomate/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../melomate/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../melomate/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../melomate/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../melomate/src/main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../melomate/src/main.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/laurriana/mymelomate/controller/ArtistController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/laurriana/mymelomate/controller/ArtistController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/laurriana/mymelomate/controller/TrackController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/laurriana/mymelomate/controller/TrackController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/laurriana/mymelomate/repository/ArtistRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/laurriana/mymelomate/repository/ArtistRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/laurriana/mymelomate/repository/TrackRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/laurriana/mymelomate/repository/TrackRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/laurriana/mymelomate/controller/AlbumController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/laurriana/mymelomate/controller/AlbumController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/laurriana/mymelomate/controller/ArtistController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/laurriana/mymelomate/controller/ArtistController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/laurriana/mymelomate/controller/TrackController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/laurriana/mymelomate/controller/TrackController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/laurriana/mymelomate/model/Artist.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/laurriana/mymelomate/model/Artist.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/laurriana/mymelomate/repository/ArtistRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/laurriana/mymelomate/repository/ArtistRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/laurriana/mymelomate/repository/TrackRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/laurriana/mymelomate/repository/TrackRepository.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,6 +121,8 @@
       <workItem from="1735357420720" duration="1224000" />
       <workItem from="1735426338223" duration="7217000" />
       <workItem from="1735504483833" duration="10819000" />
+      <workItem from="1735529888391" duration="670000" />
+      <workItem from="1735608031728" duration="36000" />
     </task>
     <task id="LOCAL-00001" summary="added controller for albums">
       <option name="closed" value="true" />
