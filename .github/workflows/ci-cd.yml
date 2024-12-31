@@ -1,56 +1,38 @@
-name: CI/CD Pipeline for MyMeloMate
+name: CI/CD for Backend
 
 on:
   push:
     branches:
-      - main  # Trigger the workflow when changes are pushed to the 'main' branch
+      - main
+      paths:
+        - myMeloMate/**  # Trigger only when files in the backend are changed
 
 jobs:
   build-and-deploy:
-    runs-on: ubuntu-latest  # GitHub runner environment
+    runs-on: ubuntu-latest
 
     steps:
-    # Step 1: Check out the repository code
     - name: Checkout code
       uses: actions/checkout@v3
 
-    # Step 2: Set up Java JDK
-    - name: Set up JDK
-      uses: actions/setup-java@v2
-      with:
-        java-version: '17'  # Use the same JDK version as your project
-        distribution: 'temurin'
+    - name: Build Backend with Maven
+      run: |
+        cd myMeloMate  # Navigate to the backend folder
+        mvn clean package
 
-    # Step 3: Build the Java project using Maven
-    - name: Build with Maven
-      run: mvn clean package  # Change this to `gradle build` if you use Gradle
-      env:
-        MAVEN_OPTS: "-Xmx1024m"  # Adjust memory allocation if needed
-
-    # Step 4: Deploy the application to Raspberry Pi
     - name: Deploy to Raspberry Pi
       env:
-        PI_HOST: ${{ secrets.PI_HOST }}        # IP address of Raspberry Pi
-        PI_USER: ${{ secrets.PI_USER }}        # Username for Raspberry Pi (e.g., "pi")
-        PI_SSH_KEY: ${{ secrets.PI_SSH_KEY }}  # Private SSH key for authentication
+        PI_HOST: ${{ secrets.PI_HOST }}
+        PI_USER: ${{ secrets.PI_USER }}
+        PI_SSH_KEY: ${{ secrets.PI_SSH_KEY }}
       run: |
-        # Step 4.1: Save the SSH key to a file
         echo "$PI_SSH_KEY" > private_key.pem
         chmod 600 private_key.pem
-
-        # Step 4.2: Create the project directory on Raspberry Pi
-        ssh -i private_key.pem -o StrictHostKeyChecking=no $PI_USER@$PI_HOST 'mkdir -p ~/mymelomate'
-
-        # Step 4.3: Copy the JAR file to Raspberry Pi
-        scp -i private_key.pem -o StrictHostKeyChecking=no target/*.jar $PI_USER@$PI_HOST:~/mymelomate/
-
-        # Step 4.4: Restart the application on Raspberry Pi
+        ssh -i private_key.pem -o StrictHostKeyChecking=no $PI_USER@$PI_HOST 'mkdir -p ~/mymelomate-backend'
+        scp -i private_key.pem -o StrictHostKeyChecking=no myMeloMate/target/*.jar $PI_USER@$PI_HOST:~/mymelomate-backend/
         ssh -i private_key.pem -o StrictHostKeyChecking=no $PI_USER@$PI_HOST << 'EOF'
           pkill -f 'java -jar' || true
-          nohup java -jar ~/mymelomate/*.jar > ~/mymelomate/mymelomate.log 2>&1 &
+          nohup java -jar ~/mymelomate-backend/*.jar > ~/mymelomate-backend/mymelomate.log 2>&1 &
         EOF
-
-    # Optional Step: Clean up the private key file
     - name: Cleanup
       run: rm -f private_key.pem
-
