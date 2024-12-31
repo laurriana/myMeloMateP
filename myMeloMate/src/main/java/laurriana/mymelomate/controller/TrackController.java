@@ -107,8 +107,8 @@ public class TrackController {
                 } else {
                     // create new artist
                     Artist newArtist = new Artist();
-                    newArtist.setPlaycount(track.getPlaycount());
-                    newArtist.setName(track.getArtist());
+                    newArtist.setPlaycount(newTrack.getPlaycount());
+                    newArtist.setName(newTrack.getArtist());
                     newArtist.setImage("https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png");
                     newArtist.setUrl("https://www.last.fm/user/laurriana");
                     artistRepository.save(newArtist);
