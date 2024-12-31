@@ -154,10 +154,11 @@ public class TrackController {
 
         // delete artist playcount
         Artist artist = artistRepository.findArtistByName(trackArtist);
-        int artistPlaycount = artist.getPlaycount();
-        artist.setPlaycount(artistPlaycount - track.getPlaycount());
-        artistRepository.save(artist);
-
+        if (artist != null && track.getPlaycount() <= artist.getPlaycount()) {
+            int artistPlaycount = artist.getPlaycount();
+            artist.setPlaycount(artistPlaycount - track.getPlaycount());
+            artistRepository.save(artist);
+        }
         repository.deleteById(track.getId());
 
         return String.format("Successfully deleted %s by %s of id %d", trackName, trackArtist, trackId);
