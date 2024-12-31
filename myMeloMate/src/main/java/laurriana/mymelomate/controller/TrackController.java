@@ -146,21 +146,27 @@ public class TrackController {
 
     @DeleteMapping("/delete/{id}")
     public String handleDelete(@PathVariable int id) {
-        Track track = repository.findById(id).orElseThrow(() -> new RuntimeException(String.format("Couldn't find track of id %d", id)));
+        try {
+            Track track = repository.findById(id).orElseThrow(() -> new RuntimeException(String.format("Couldn't find track of id %d", id)));
 
-        String trackName = track.getName();
-        String trackArtist = track.getArtist();
-        int trackId = track.getId();
+            String trackName = track.getName();
+            String trackArtist = track.getArtist();
+            int trackId = track.getId();
 
-        // delete artist playcount
-        Artist artist = artistRepository.findArtistByName(trackArtist);
-        if (artist != null && track.getPlaycount() <= artist.getPlaycount()) {
-            int artistPlaycount = artist.getPlaycount();
-            artist.setPlaycount(artistPlaycount - track.getPlaycount());
-            artistRepository.save(artist);
+            // delete artist playcount
+            Artist artist = artistRepository.findArtistByName(trackArtist);
+            if (artist != null && track.getPlaycount() <= artist.getPlaycount()) {
+                int artistPlaycount = artist.getPlaycount();
+                artist.setPlaycount(artistPlaycount - track.getPlaycount());
+                artistRepository.save(artist);
+            }
+            repository.deleteById(track.getId());
+
+            return String.format("Successfully deleted %s by %s of id %d", trackName, trackArtist, trackId);
+        } catch (RuntimeException e) {
+            return String.format("Internal server error: %s", e.getMessage());
         }
-        repository.deleteById(track.getId());
 
-        return String.format("Successfully deleted %s by %s of id %d", trackName, trackArtist, trackId);
+
     }
 }
