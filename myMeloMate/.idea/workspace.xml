@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b6040b7f-a8ad-427e-a93f-349f351ea350" name="Changes" comment="improvements in data sql" />
+    <list default="true" id="b6040b7f-a8ad-427e-a93f-349f351ea350" name="Changes" comment="changes in data sql for remote debugging (x2)">
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -124,7 +126,7 @@
       <workItem from="1735529888391" duration="670000" />
       <workItem from="1735608031728" duration="36000" />
       <workItem from="1735611126358" duration="13360000" />
-      <workItem from="1735672857858" duration="3150000" />
+      <workItem from="1735672857858" duration="3562000" />
     </task>
     <task id="LOCAL-00001" summary="added controller for albums">
       <option name="closed" value="true" />
@@ -382,7 +384,31 @@
       <option name="project" value="LOCAL" />
       <updated>1735686534609</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="changes in data sql for remote debugging">
+      <option name="closed" value="true" />
+      <created>1735686765580</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1735686765580</updated>
+    </task>
+    <task id="LOCAL-00034" summary="changes in data sql for remote debugging">
+      <option name="closed" value="true" />
+      <created>1735686879685</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1735686879685</updated>
+    </task>
+    <task id="LOCAL-00035" summary="changes in data sql for remote debugging (x2)">
+      <option name="closed" value="true" />
+      <created>1735687097407</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1735687097407</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -407,8 +433,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="re-ordered application.properties" />
-    <MESSAGE value="updated allowed origins" />
     <MESSAGE value="modified pom.xml" />
     <MESSAGE value="modified maven compiler plugins version" />
     <MESSAGE value="added lombok version" />
@@ -432,6 +456,8 @@
     <MESSAGE value="dropped and re-created database on home server (x2)" />
     <MESSAGE value="dropped and re-created database on home server (x3)" />
     <MESSAGE value="improvements in data sql" />
-    <option name="LAST_COMMIT_MESSAGE" value="improvements in data sql" />
+    <MESSAGE value="changes in data sql for remote debugging" />
+    <MESSAGE value="changes in data sql for remote debugging (x2)" />
+    <option name="LAST_COMMIT_MESSAGE" value="changes in data sql for remote debugging (x2)" />
   </component>
 </project>
