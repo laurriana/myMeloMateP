@@ -160,7 +160,7 @@ public class TrackController {
                 artist.setPlaycount(artistPlaycount - track.getPlaycount());
                 artistRepository.save(artist);
             }
-            repository.deleteById(track.getId());
+            repository.deleteById(trackId);
 
             return String.format("Successfully deleted %s by %s of id %d", trackName, trackArtist, trackId);
         } catch (RuntimeException e) {
