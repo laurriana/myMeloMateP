@@ -14,6 +14,18 @@ public class Track {
     private String url;
     private String image;
 
+    @Override
+    public String toString() {
+        return "Track {" +
+                "id: " + id +
+                "| name: '" + name + '\'' +
+                "| artist: '" + artist + '\'' +
+                "| playcount: " + playcount +
+                "| url: '" + url + '\'' +
+                "| image: '" + image + '\'' +
+                '}';
+    }
+
     public Track() {}
 
     public int getId() {
