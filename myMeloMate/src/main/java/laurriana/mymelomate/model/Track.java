@@ -18,11 +18,11 @@ public class Track {
     public String toString() {
         return "Track {" +
                 "id: " + id +
-                "| name: '" + name + '\'' +
-                "| artist: '" + artist + '\'' +
-                "| playcount: " + playcount +
-                "| url: '" + url + '\'' +
-                "| image: '" + image + '\'' +
+                " | name: '" + name + '\'' +
+                " | artist: '" + artist + '\'' +
+                " | playcount: " + playcount +
+                " | url: '" + url + '\'' +
+                " | image: '" + image + '\'' +
                 '}';
     }
 

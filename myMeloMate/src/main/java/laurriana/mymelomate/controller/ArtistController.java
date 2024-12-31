@@ -4,10 +4,7 @@ import laurriana.mymelomate.model.Artist;
 import laurriana.mymelomate.repository.ArtistRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
@@ -62,5 +59,17 @@ public class ArtistController {
     @GetMapping("/allNameContains")
     public List<Artist> getByName(String name) {
         return repository.findArtistByNameContainingIgnoreCase(name);
+    }
+
+    @DeleteMapping("/delete/{id}")
+    public String handleDelete(@PathVariable int id) {
+        try {
+            Artist artist = repository.findById(id).orElseThrow(() -> new RuntimeException(String.format("Couldn't find artist of id %d", id)));
+            String artistName = artist.getName();
+            repository.delete(artist);
+            return String.format("Successfully deleted artist %d of name '%s'", id, artistName);
+        } catch (RuntimeException e) {
+            return String.format("Unexpected internal server error: %s", e);
+        }
     }
 }
