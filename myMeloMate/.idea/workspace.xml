@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b6040b7f-a8ad-427e-a93f-349f351ea350" name="Changes" comment="added lombok version" />
+    <list default="true" id="b6040b7f-a8ad-427e-a93f-349f351ea350" name="Changes" comment="introduced delete method for artists">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/laurriana/mymelomate/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/laurriana/mymelomate/WebConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../package.json" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -53,32 +58,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Maven.myMeloMate [clean].executor": "Run",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Spring Boot.MyMeloMateApplication.executor": "Run",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/lauriana/portfolio/myMeloMateP/myMeloMate",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "editing.templates",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Maven.myMeloMate [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.myMeloMate [test].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.myMeloMate [validate].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.myMeloMate [verify].executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Spring Boot.MyMeloMateApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/lauriana/portfolio/myMeloMateP/myMeloMate&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editing.templates&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="MyMeloMateApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
@@ -118,7 +126,8 @@
       <workItem from="1735504483833" duration="10819000" />
       <workItem from="1735529888391" duration="670000" />
       <workItem from="1735608031728" duration="36000" />
-      <workItem from="1735611126358" duration="4382000" />
+      <workItem from="1735611126358" duration="13360000" />
+      <workItem from="1735672857858" duration="2018000" />
     </task>
     <task id="LOCAL-00001" summary="added controller for albums">
       <option name="closed" value="true" />
@@ -208,7 +217,135 @@
       <option name="project" value="LOCAL" />
       <updated>1735625925725</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="jdbc dialect ;-;">
+      <option name="closed" value="true" />
+      <created>1735626910809</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1735626910810</updated>
+    </task>
+    <task id="LOCAL-00013" summary="jdbc dialect ;-;">
+      <option name="closed" value="true" />
+      <created>1735627034864</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1735627034864</updated>
+    </task>
+    <task id="LOCAL-00014" summary="jdbc dialect ;-; removed!">
+      <option name="closed" value="true" />
+      <created>1735627496888</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1735627496888</updated>
+    </task>
+    <task id="LOCAL-00015" summary="2 baddies 1 porsche">
+      <option name="closed" value="true" />
+      <created>1735629012214</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1735629012214</updated>
+    </task>
+    <task id="LOCAL-00016" summary="save new artist if they don't exist">
+      <option name="closed" value="true" />
+      <created>1735629850196</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1735629850196</updated>
+    </task>
+    <task id="LOCAL-00017" summary="show sql for debugging and set init mode to always because tables are empty on platform">
+      <option name="closed" value="true" />
+      <created>1735631465634</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1735631465634</updated>
+    </task>
+    <task id="LOCAL-00018" summary="changed init mode">
+      <option name="closed" value="true" />
+      <created>1735631715430</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1735631715430</updated>
+    </task>
+    <task id="LOCAL-00019" summary="improved ID handling">
+      <option name="closed" value="true" />
+      <created>1735632210255</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1735632210255</updated>
+    </task>
+    <task id="LOCAL-00020" summary="modified post method for tracks">
+      <option name="closed" value="true" />
+      <created>1735633907618</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1735633907618</updated>
+    </task>
+    <task id="LOCAL-00021" summary="condensed and improved post method for artist handling">
+      <option name="closed" value="true" />
+      <created>1735634105293</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1735634105293</updated>
+    </task>
+    <task id="LOCAL-00022" summary="improved delete method in tracks">
+      <option name="closed" value="true" />
+      <created>1735634575441</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1735634575441</updated>
+    </task>
+    <task id="LOCAL-00023" summary="runtime exception logging">
+      <option name="closed" value="true" />
+      <created>1735635960402</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1735635960402</updated>
+    </task>
+    <task id="LOCAL-00024" summary="(more) runtime exception logging">
+      <option name="closed" value="true" />
+      <created>1735636183672</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1735636183672</updated>
+    </task>
+    <task id="LOCAL-00025" summary="(more x2) runtime exception logging">
+      <option name="closed" value="true" />
+      <created>1735636482138</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1735636482138</updated>
+    </task>
+    <task id="LOCAL-00026" summary="prettied toString method for Track">
+      <option name="closed" value="true" />
+      <created>1735636655781</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1735636655781</updated>
+    </task>
+    <task id="LOCAL-00027" summary="introduced delete method for artists">
+      <option name="closed" value="true" />
+      <created>1735637068399</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1735637068399</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -226,6 +363,10 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT_PROFILE" value="Project Default" />
+    <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="CHECK_NEW_TODO" value="false" />
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
@@ -238,6 +379,21 @@
     <MESSAGE value="modified pom.xml" />
     <MESSAGE value="modified maven compiler plugins version" />
     <MESSAGE value="added lombok version" />
-    <option name="LAST_COMMIT_MESSAGE" value="added lombok version" />
+    <MESSAGE value="jdbc dialect ;-;" />
+    <MESSAGE value="jdbc dialect ;-; removed!" />
+    <MESSAGE value="2 baddies 1 porsche" />
+    <MESSAGE value="save new artist if they don't exist" />
+    <MESSAGE value="show sql for debugging and set init mode to always because tables are empty on platform" />
+    <MESSAGE value="changed init mode" />
+    <MESSAGE value="improved ID handling" />
+    <MESSAGE value="modified post method for tracks" />
+    <MESSAGE value="condensed and improved post method for artist handling" />
+    <MESSAGE value="improved delete method in tracks" />
+    <MESSAGE value="runtime exception logging" />
+    <MESSAGE value="(more) runtime exception logging" />
+    <MESSAGE value="(more x2) runtime exception logging" />
+    <MESSAGE value="prettied toString method for Track" />
+    <MESSAGE value="introduced delete method for artists" />
+    <option name="LAST_COMMIT_MESSAGE" value="introduced delete method for artists" />
   </component>
 </project>
