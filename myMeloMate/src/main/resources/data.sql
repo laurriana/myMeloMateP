@@ -1,3 +1,5 @@
+CREATE DATABASE IF NOT EXISTS melomate;
+
 DROP TABLE IF EXISTS weekly_album_chart;
 CREATE TABLE weekly_album_chart (
     id INT AUTO_INCREMENT PRIMARY KEY,
