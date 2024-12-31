@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
-import java.util.Map;
 
 @RestController
 @RequestMapping("/tracks")
@@ -105,6 +104,14 @@ public class TrackController {
                     int currentArtistPlaycount = artist.getPlaycount();
                     artist.setPlaycount(currentArtistPlaycount + newTrack.getPlaycount());
                     artistRepository.save(artist);
+                } else {
+                    // create new artist
+                    Artist newArtist = new Artist();
+                    newArtist.setPlaycount(track.getPlaycount());
+                    newArtist.setName(track.getArtist());
+                    newArtist.setImage("https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png");
+                    newArtist.setUrl("https://www.last.fm/user/laurriana");
+                    artistRepository.save(newArtist);
                 }
             }
         }
