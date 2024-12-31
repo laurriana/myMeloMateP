@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b6040b7f-a8ad-427e-a93f-349f351ea350" name="Changes" comment="dropped and re-created database on home server (x3)" />
+    <list default="true" id="b6040b7f-a8ad-427e-a93f-349f351ea350" name="Changes" comment="improvements in data sql" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -124,7 +124,7 @@
       <workItem from="1735529888391" duration="670000" />
       <workItem from="1735608031728" duration="36000" />
       <workItem from="1735611126358" duration="13360000" />
-      <workItem from="1735672857858" duration="2837000" />
+      <workItem from="1735672857858" duration="3150000" />
     </task>
     <task id="LOCAL-00001" summary="added controller for albums">
       <option name="closed" value="true" />
@@ -374,7 +374,15 @@
       <option name="project" value="LOCAL" />
       <updated>1735686218982</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="improvements in data sql">
+      <option name="closed" value="true" />
+      <created>1735686534609</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1735686534609</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -399,7 +407,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="cleaned up and deployed" />
     <MESSAGE value="re-ordered application.properties" />
     <MESSAGE value="updated allowed origins" />
     <MESSAGE value="modified pom.xml" />
@@ -424,6 +431,7 @@
     <MESSAGE value="dropped and re-created database on home server" />
     <MESSAGE value="dropped and re-created database on home server (x2)" />
     <MESSAGE value="dropped and re-created database on home server (x3)" />
-    <option name="LAST_COMMIT_MESSAGE" value="dropped and re-created database on home server (x3)" />
+    <MESSAGE value="improvements in data sql" />
+    <option name="LAST_COMMIT_MESSAGE" value="improvements in data sql" />
   </component>
 </project>
