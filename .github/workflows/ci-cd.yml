@@ -21,6 +21,13 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
 
+    - name: Run tests
+      run: mvn test
+      env:
+        SPRING_DATASOURCE_URL: ${{ secrets.SPRING_DATASOURCE_URL }}
+        SPRING_DATASOURCE_USERNAME: ${{ secrets.SPRING_DATASOURCE_USERNAME }}
+        SPRING_DATASOURCE_PASSWORD: ${{ secrets.SPRING_DATASOURCE_PASSWORD }}
+
     - name: Build Backend with Maven
       run: |
         cd myMeloMate  # Navigate to the backend folder
