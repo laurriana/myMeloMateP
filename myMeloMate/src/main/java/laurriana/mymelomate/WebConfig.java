@@ -14,7 +14,7 @@ public class WebConfig {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**")  // Allow all endpoints
-                        .allowedOrigins("http://localhost:24", "http://192.168.2.16")  // Allow specific origins
+                        .allowedOrigins("http://192.168.2.84:8080", "http://192.168.2.96")
                         .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH");  // Allow specific HTTP methods
             }
         };
