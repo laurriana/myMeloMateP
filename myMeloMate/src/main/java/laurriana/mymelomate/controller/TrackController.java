@@ -103,16 +103,16 @@ public class TrackController {
                 if (artist != null) {
                     int currentArtistPlaycount = artist.getPlaycount();
                     artist.setPlaycount(currentArtistPlaycount + newTrack.getPlaycount());
-                    artistRepository.save(artist);
                 } else {
                     // create new artist
-                    Artist newArtist = new Artist();
-                    newArtist.setPlaycount(newTrack.getPlaycount());
-                    newArtist.setName(newTrack.getArtist());
-                    newArtist.setImage("https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png");
-                    newArtist.setUrl("https://www.last.fm/user/laurriana");
-                    artistRepository.save(newArtist);
+                    artist = new Artist();
+                    artist.setPlaycount(newTrack.getPlaycount());
+                    artist.setName(newTrack.getArtist());
+                    artist.setImage("https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png");
+                    artist.setUrl("https://www.last.fm/user/laurriana");
                 }
+                artistRepository.save(artist);
+
             }
         }
         return new ResponseEntity<>(String.format("Successfully saved track “%s” by %s", newTrack.getName(), newTrack.getArtist()), HttpStatus.OK);
