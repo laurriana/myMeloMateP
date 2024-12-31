@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b6040b7f-a8ad-427e-a93f-349f351ea350" name="Changes" comment="added cors mapping config file">
-      <change beforePath="$PROJECT_DIR$/../melomate/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../melomate/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../melomate/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../melomate/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../melomate/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../melomate/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../melomate/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../melomate/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../melomate/src/main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../melomate/src/main.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="b6040b7f-a8ad-427e-a93f-349f351ea350" name="Changes" comment="added lombok version" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,6 +19,7 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -59,31 +53,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;Spring Boot.MyMeloMateApplication.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/lauriana/portfolio/myMeloMateP/myMeloMate&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editing.templates&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Maven.myMeloMate [clean].executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.MyMeloMateApplication.executor": "Run",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/lauriana/portfolio/myMeloMateP/myMeloMate",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "editing.templates",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="MyMeloMateApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
@@ -123,6 +118,7 @@
       <workItem from="1735504483833" duration="10819000" />
       <workItem from="1735529888391" duration="670000" />
       <workItem from="1735608031728" duration="36000" />
+      <workItem from="1735611126358" duration="4382000" />
     </task>
     <task id="LOCAL-00001" summary="added controller for albums">
       <option name="closed" value="true" />
@@ -156,11 +152,78 @@
       <option name="project" value="LOCAL" />
       <updated>1735506663498</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="cleaned up and deployed">
+      <option name="closed" value="true" />
+      <created>1735623512560</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1735623512560</updated>
+    </task>
+    <task id="LOCAL-00006" summary="re-ordered application.properties">
+      <option name="closed" value="true" />
+      <created>1735624078194</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1735624078194</updated>
+    </task>
+    <task id="LOCAL-00007" summary="re-ordered application.properties">
+      <option name="closed" value="true" />
+      <created>1735624443349</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1735624443349</updated>
+    </task>
+    <task id="LOCAL-00008" summary="updated allowed origins">
+      <option name="closed" value="true" />
+      <created>1735624914220</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1735624914220</updated>
+    </task>
+    <task id="LOCAL-00009" summary="modified pom.xml">
+      <option name="closed" value="true" />
+      <created>1735625375166</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1735625375166</updated>
+    </task>
+    <task id="LOCAL-00010" summary="modified maven compiler plugins version">
+      <option name="closed" value="true" />
+      <created>1735625666881</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1735625666881</updated>
+    </task>
+    <task id="LOCAL-00011" summary="added lombok version">
+      <option name="closed" value="true" />
+      <created>1735625925725</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1735625925725</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <ignored-roots>
@@ -169,6 +232,12 @@
     <MESSAGE value="added controller for albums" />
     <MESSAGE value="added controller methods for tracks + unforeseen post and delete method :)" />
     <MESSAGE value="added cors mapping config file" />
-    <option name="LAST_COMMIT_MESSAGE" value="added cors mapping config file" />
+    <MESSAGE value="cleaned up and deployed" />
+    <MESSAGE value="re-ordered application.properties" />
+    <MESSAGE value="updated allowed origins" />
+    <MESSAGE value="modified pom.xml" />
+    <MESSAGE value="modified maven compiler plugins version" />
+    <MESSAGE value="added lombok version" />
+    <option name="LAST_COMMIT_MESSAGE" value="added lombok version" />
   </component>
 </project>
