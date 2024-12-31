@@ -1,4 +1,4 @@
-import requests
+import requests  # type: ignore
 import json
 import time
 from collections import defaultdict
