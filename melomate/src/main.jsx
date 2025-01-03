@@ -1,15 +1,38 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import 'bootstrap/dist/css/bootstrap.css'
+import { createBrowserRouter, Outlet, RouterProvider } from 'react-router-dom'
 
-import App from './App.jsx'
 import Navbar from './components/Navbar.jsx'
+import Home from './components/Home.jsx'
+
+import 'bootstrap/dist/css/bootstrap.css'
 import './stylesheets/main.css'
+
+function layout() {
+  return (
+    <>
+    <Navbar />
+    <Outlet />
+    </>
+  );
+}
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <layout />,
+    children: [
+      {
+        path: "/",
+        element: <Home />
+      },
+    ],
+    errorElement: <div><Navbar/><h2>404 not found</h2></div>
+  }
+]);
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <Navbar />
-    <App />
+    <RouterProvider router={router} />
   </StrictMode>,
 )
-

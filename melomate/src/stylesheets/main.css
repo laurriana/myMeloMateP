@@ -1,17 +1,44 @@
 @import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&family=MuseoModerno:ital,wght@0,100..900;1,100..900&family=Parkinsans:wght@300..800&display=swap');
 
+:root {
+    padding: 2vmax;
+    overflow: hidden;
+}
+
 body {
     font-family: "Didact Gothic", Arial, Helvetica, sans-serif !important;
 }
 
 /* navigation bar */
-.navbar ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+.navbar {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    box-sizing: border-box;    
 }
 
-.navbar li {
-    display: inline;
-    padding: 10px;
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0rem 0rem 0.875rem 0rem rgba(81, 117, 143, 0.4);
+    border-radius: 0.75rem;
+    position: relative;
+    max-height: fit-content;
+}
+
+nav > ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    gap: 2em;
+    line-height: 0px;
+}
+
+nav > li:hover {
+
 }
