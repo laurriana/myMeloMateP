@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b6040b7f-a8ad-427e-a93f-349f351ea350" name="Changes" comment="changes in data sql for remote debugging (x2)">
+    <list default="true" id="b6040b7f-a8ad-427e-a93f-349f351ea350" name="Changes" comment="removed duplicate in allowed origins from WebConfig">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/laurriana/mymelomate/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/laurriana/mymelomate/WebConfig.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,37 +56,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Maven.myMeloMate [clean].executor": "Run",
-    "Maven.myMeloMate [test].executor": "Run",
-    "Maven.myMeloMate [validate].executor": "Run",
-    "Maven.myMeloMate [verify].executor": "Run",
-    "Notification.DisplayName-DoNotAsk-Vcs Notifications": "VCS notifications",
-    "Notification.DoNotAsk-Vcs Notifications": "true",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Spring Boot.MyMeloMateApplication.executor": "Run",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/lauriana/portfolio/myMeloMateP/myMeloMate",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "editing.templates",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Maven.myMeloMate [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.myMeloMate [test].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.myMeloMate [validate].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.myMeloMate [verify].executor&quot;: &quot;Run&quot;,
+    &quot;Notification.DisplayName-DoNotAsk-Vcs Notifications&quot;: &quot;VCS notifications&quot;,
+    &quot;Notification.DoNotAsk-Vcs Notifications&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Spring Boot.MyMeloMateApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/lauriana/portfolio/myMeloMateP/myMeloMate&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editing.templates&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="MyMeloMateApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
@@ -127,6 +128,7 @@
       <workItem from="1735608031728" duration="36000" />
       <workItem from="1735611126358" duration="13360000" />
       <workItem from="1735672857858" duration="5629000" />
+      <workItem from="1735961484592" duration="321000" />
     </task>
     <task id="LOCAL-00001" summary="added controller for albums">
       <option name="closed" value="true" />
@@ -416,7 +418,15 @@
       <option name="project" value="LOCAL" />
       <updated>1735687692952</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="removed duplicate in allowed origins from WebConfig">
+      <option name="closed" value="true" />
+      <created>1735961915651</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1735961915651</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -441,7 +451,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="modified pom.xml" />
     <MESSAGE value="modified maven compiler plugins version" />
     <MESSAGE value="added lombok version" />
     <MESSAGE value="jdbc dialect ;-;" />
@@ -466,6 +475,7 @@
     <MESSAGE value="improvements in data sql" />
     <MESSAGE value="changes in data sql for remote debugging" />
     <MESSAGE value="changes in data sql for remote debugging (x2)" />
-    <option name="LAST_COMMIT_MESSAGE" value="changes in data sql for remote debugging (x2)" />
+    <MESSAGE value="removed duplicate in allowed origins from WebConfig" />
+    <option name="LAST_COMMIT_MESSAGE" value="removed duplicate in allowed origins from WebConfig" />
   </component>
 </project>
