@@ -6,7 +6,7 @@ function Charts() {
   useEffect(() => {
     const fetchData = async () => {
       const response = await axios.get(
-        "http://neocity.local:8084/artists/allPlaycountGreater?playcount=20"
+        "http://neocity.local:8084/albums/all"
       );
       setTracks(response.data);
     };
@@ -17,7 +17,7 @@ const [image, setImage] = useState([]);
 
 
 const withImage = tracks.filter(song =>
-    song.image && !song.image.includes("lastfm")
+    song.image && song.image.includes("lastfm")
 )
 
   const listItems = withImage.map((artist) => (
