@@ -13,45 +13,49 @@ body {
 
 /* navigation bar */
 .navbar {
+    align-items: center;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column-reverse;
     justify-content: center;
-    align-items: center;
-    width: 100vw;
-    box-sizing: border-box;
+    margin: auto;
+    max-width: 90vw;
     position: relative;
+    padding-bottom: 40px;
+    width: 100%;
 }
 
 nav {
-    display: flex;
-    justify-content: space-between;
     align-items: center;
     background-color: white;
-    box-shadow: 0rem 0rem 0.875rem 0rem rgba(81, 117, 143, 0.4);
     border-radius: 0.75rem;
+    box-shadow: 0rem 0rem 0.875rem 0rem rgba(81, 117, 143, 0.4);
+    display: flex;
+    justify-content: center;
+    padding: 1.75em 1.5em 1.75em 1.5em;
     position: relative;
-    padding: 1.10em 1.5em 1.10em 1.5em;
 }
 
 nav > ul {
-    display: flex;
-    justify-content: space-between;
     align-items: center;
-    list-style: none;
-    gap: 1.75em;
-    padding-left: 0%;
-    margin-bottom: 0;
+    display: flex;
+    flex-wrap: wrap;
     font-size: larger;
-    line-height: .90em;
+    gap: 1.75em;
+    justify-content: center;
+    list-style: none;
+    line-height: 1.5%;
+    margin-bottom: 0;
+    padding-left: 0%;
 }
 
 nav a {
-    text-decoration: none;
-    font-weight: 600;
     color: black;
-    transition: all 0.25s ease-in-out;
     display: inline-flex;
     font-size: .85em;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.25s ease-in-out;
 }
 
 nav a:hover {
@@ -61,4 +65,9 @@ nav a:hover {
 
 nav a.active {
     color: #2087d0;
+}
+
+/* home page */
+.home {
+    text-align: center;
 }
