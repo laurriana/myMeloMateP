@@ -3,7 +3,7 @@
 
 :root {
     padding: 2vmax;
-    overflow: hidden;
+    overflow: auto;
     /* cursor: url(https://cur.cursors-4u.net/nature/nat-10/nat997.cur), auto !important; */
 }
 
@@ -70,4 +70,27 @@ nav a.active {
 /* home page */
 .home {
     text-align: center;
+}
+
+
+/* charts */
+.charts {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    gap: 1.5em;
+    align-items: flex-start;
+}
+
+
+.charts .card {
+    width: 15rem;
+    transition: all .25s ease-in-out;
+    filter: grayscale(.75);
+}
+
+.charts .card:hover {
+    transform: scale(1.05);
+    filter: grayscale(0);
 }
