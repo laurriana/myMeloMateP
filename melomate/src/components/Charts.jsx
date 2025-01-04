@@ -13,6 +13,9 @@ function Charts() {
     fetchData().catch(console.error);
   }, []);
 
+const [image, setImage] = useState([]);
+
+
 const withImage = tracks.filter(song =>
     song.image && !song.image.includes("lastfm")
 )
