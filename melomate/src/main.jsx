@@ -4,6 +4,7 @@ import { createBrowserRouter, Outlet, RouterProvider } from 'react-router-dom'
 
 import Navbar from './components/Navbar.jsx'
 import Home from './components/Home.jsx'
+import Charts from './components/Charts.jsx'
 
 import 'bootstrap/dist/css/bootstrap.css'
 import './stylesheets/main.css'
@@ -23,9 +24,13 @@ const router = createBrowserRouter([
     element: <Layout />,
     children: [
       {
-        path: "/",
+        path: '/',
         element: <Home />
       },
+      {
+        path: '/charts',
+        element: <Charts />
+      }
     ],
     errorElement: <div><Navbar/><h2>404 not found</h2></div>
   }
