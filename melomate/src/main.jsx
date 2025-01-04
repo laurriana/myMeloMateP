@@ -8,7 +8,7 @@ import Home from './components/Home.jsx'
 import 'bootstrap/dist/css/bootstrap.css'
 import './stylesheets/main.css'
 
-function layout() {
+function Layout() {
   return (
     <>
     <Navbar />
@@ -20,7 +20,7 @@ function layout() {
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <layout />,
+    element: <Layout />,
     children: [
       {
         path: "/",

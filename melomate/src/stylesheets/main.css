@@ -1,12 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&family=MuseoModerno:ital,wght@0,100..900;1,100..900&family=Parkinsans:wght@300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Didact+Gothic&family=MuseoModerno:ital,wght@0,100..900;1,100..900&family=Parkinsans:wght@300..800&display=swap');
+
 
 :root {
     padding: 2vmax;
     overflow: hidden;
+    /* cursor: url(https://cur.cursors-4u.net/nature/nat-10/nat997.cur), auto !important; */
 }
 
 body {
-    font-family: "Didact Gothic", Arial, Helvetica, sans-serif !important;
+    font-family: "Archivo", Arial, Helvetica, sans-serif !important;
 }
 
 /* navigation bar */
@@ -16,7 +18,8 @@ body {
     justify-content: center;
     align-items: center;
     width: 100vw;
-    box-sizing: border-box;    
+    box-sizing: border-box;
+    position: relative;
 }
 
 nav {
@@ -27,7 +30,7 @@ nav {
     box-shadow: 0rem 0rem 0.875rem 0rem rgba(81, 117, 143, 0.4);
     border-radius: 0.75rem;
     position: relative;
-    max-height: fit-content;
+    padding: 1.10em 1.5em 1.10em 1.5em;
 }
 
 nav > ul {
@@ -35,10 +38,27 @@ nav > ul {
     justify-content: space-between;
     align-items: center;
     list-style: none;
-    gap: 2em;
-    line-height: 0px;
+    gap: 1.75em;
+    padding-left: 0%;
+    margin-bottom: 0;
+    font-size: larger;
+    line-height: .90em;
 }
 
-nav > li:hover {
+nav a {
+    text-decoration: none;
+    font-weight: 600;
+    color: black;
+    transition: all 0.25s ease-in-out;
+    display: inline-flex;
+    font-size: .85em;
+}
 
+nav a:hover {
+    color:#55b0f0;
+    font-size: 0.95em;
+}
+
+nav a.active {
+    color: #2087d0;
 }
