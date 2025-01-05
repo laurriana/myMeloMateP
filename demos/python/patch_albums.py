@@ -8,11 +8,11 @@ hrs = {
     "Content-Type": "application/json"
 }
 
-with open("/Users/lauriana/portfolio/myMeloMateP/demos/track_albums.csv", "r") as f:
+with open("/Users/lauriana/portfolio/myMeloMateP/demos/data/track_albums.csv", "r") as f:
     reader = DictReader(f)
     tracks = list(reader)
 
 
 for i in tracks:
-    res = requests.patch(PATCH_URL.format(trackId=i['track_id'], albumId=i["album_id"]), headers=hrs)
+    res = requests.patch(PATCH_URL.format(trackId=i["track_id"], albumId=i["album_id"]), headers=hrs)
     print(res.text)

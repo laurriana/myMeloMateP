@@ -12,7 +12,6 @@ public class Track {
     private String artist;
     private Integer playcount;
     private String url;
-    private String image;
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "album_id", nullable = true) // init. doesn't have an album associated to it yet.
@@ -24,18 +23,6 @@ public class Track {
 
     public void setAlbum(Album album) {
         this.album = album;
-    }
-
-    @Override
-    public String toString() {
-        return "Track {" +
-                "id: " + id +
-                " | name: '" + name + '\'' +
-                " | artist: '" + artist + '\'' +
-                " | playcount: " + playcount +
-                " | url: '" + url + '\'' +
-                " | image: '" + image + '\'' +
-                '}';
     }
 
     public Track() {}
@@ -78,13 +65,5 @@ public class Track {
 
     public void setUrl(String url) {
         this.url = url;
-    }
-
-    public String getImage() {
-        return image;
-    }
-
-    public void setImage(String image) {
-        this.image = image;
     }
 }

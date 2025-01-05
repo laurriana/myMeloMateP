@@ -2,6 +2,7 @@ package laurriana.mymelomate.model;
 
 import jakarta.persistence.*;
 
+import java.util.HashSet;
 import java.util.Set;
 
 @Entity
@@ -16,8 +17,8 @@ public class Album {
     private String url;
     private String  image;
 
-    @OneToMany(mappedBy = "album", cascade = CascadeType.ALL)
-    private Set<Track> trackSet;
+    @OneToMany(mappedBy = "album", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    private Set<Track> trackSet = new HashSet<>();
 
     public int getId() {
         return id;
@@ -65,5 +66,13 @@ public class Album {
 
     public void setImage(String image) {
         this.image = image;
+    }
+
+    public Set<Track> getTrackSet() {
+        return trackSet;
+    }
+
+    public void setTrackSet(Set<Track> trackSet) {
+        this.trackSet = trackSet;
     }
 }
