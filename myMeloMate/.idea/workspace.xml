@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b6040b7f-a8ad-427e-a93f-349f351ea350" name="Changes" comment="improvements in TrackRepository and TrackController" />
+    <list default="true" id="b6040b7f-a8ad-427e-a93f-349f351ea350" name="Changes" comment="improvements in TrackRepository and TrackController">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data.sql" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -142,7 +145,7 @@
       <workItem from="1736025201736" duration="69000" />
       <workItem from="1736025292609" duration="2394000" />
       <workItem from="1736040984462" duration="170000" />
-      <workItem from="1736051902749" duration="3500000" />
+      <workItem from="1736051902749" duration="4248000" />
     </task>
     <task id="LOCAL-00001" summary="added controller for albums">
       <option name="closed" value="true" />

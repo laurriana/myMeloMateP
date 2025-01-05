@@ -24,7 +24,7 @@ CREATE DATABASE /*!32312 IF NOT EXISTS */ `melomate` /*!40100 DEFAULT CHARACTER 
 USE `melomate`;
 
 --
--- Table structure for table `weekly_album_chart`
+-- Table structure for table `albums`
 --
 
 DROP TABLE IF EXISTS albums;
@@ -46,7 +46,7 @@ CREATE TABLE albums
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `weekly_album_chart`
+-- Dumping data for table `albums`
 --
 
 LOCK TABLES albums WRITE;
@@ -505,7 +505,7 @@ VALUES (1, 'Snow Angel (Deluxe)', 'Reneé Rapp', 65, 'https://www.last.fm/music/
 UNLOCK TABLES;
 
 --
--- Table structure for table `weekly_artist_chart`
+-- Table structure for table `artists`
 --
 
 DROP TABLE IF EXISTS `artists`;
@@ -526,7 +526,7 @@ CREATE TABLE `artists`
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `weekly_artist_chart`
+-- Dumping data for table `artists`
 --
 
 LOCK TABLES `artists` WRITE;
@@ -799,7 +799,7 @@ VALUES (1, 'NCT 127', 241, 'https://www.last.fm/music/NCT+127',
 UNLOCK TABLES;
 
 --
--- Table structure for table `weekly_tag_chart`
+-- Table structure for table `tags`
 --
 
 DROP TABLE IF EXISTS tags;
@@ -818,7 +818,7 @@ CREATE TABLE tags
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `weekly_tag_chart`
+-- Dumping data for table `tags`
 --
 
 LOCK TABLES tags WRITE;
@@ -880,7 +880,7 @@ VALUES (1, 'rnb', 94),
 UNLOCK TABLES;
 
 --
--- Table structure for table `weekly_track_chart`
+-- Table structure for table `tracks`
 --
 
 DROP TABLE IF EXISTS tracks;
@@ -902,7 +902,7 @@ CREATE TABLE tracks
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `weekly_track_chart`
+-- Dumping data for table `tracks`
 --
 
 LOCK TABLES tracks WRITE;
