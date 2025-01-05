@@ -1,5 +1,6 @@
 package laurriana.mymelomate.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 import java.util.HashSet;
@@ -17,6 +18,7 @@ public class Album {
     private String url;
     private String  image;
 
+    @JsonIgnore
     @OneToMany(mappedBy = "album", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private Set<Track> trackSet = new HashSet<>();
 
