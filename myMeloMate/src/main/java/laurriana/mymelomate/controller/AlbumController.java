@@ -1,7 +1,6 @@
 package laurriana.mymelomate.controller;
 
 import laurriana.mymelomate.model.Album;
-import laurriana.mymelomate.model.Track;
 import laurriana.mymelomate.repository.AlbumRepository;
 import laurriana.mymelomate.service.AlbumService;
 import org.springframework.beans.factory.annotation.Autowired;
