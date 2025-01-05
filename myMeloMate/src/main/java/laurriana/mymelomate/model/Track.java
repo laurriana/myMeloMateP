@@ -1,5 +1,6 @@
 package laurriana.mymelomate.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 
 @Entity
@@ -14,7 +15,8 @@ public class Track {
     private String url;
 
     @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "album_id", nullable = true) // init. doesn't have an album associated to it yet.
+    @JoinColumn(name = "album_id", nullable = true)
+    @JsonBackReference
     private Album album;
 
     public Album getAlbum() {
