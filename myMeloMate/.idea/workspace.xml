@@ -4,19 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b6040b7f-a8ad-427e-a93f-349f351ea350" name="Changes" comment="added patch method for images">
-      <change afterPath="$PROJECT_DIR$/src/main/java/laurriana/mymelomate/service/AlbumService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/laurriana/mymelomate/service/ArtistService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/laurriana/mymelomate/service/TrackService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../demos/data/notepad.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../melomate/src/components/Charts.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../melomate/src/components/Charts.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/laurriana/mymelomate/controller/TrackController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/laurriana/mymelomate/controller/TrackController.java" afterDir="false" />
+    <list default="true" id="b6040b7f-a8ad-427e-a93f-349f351ea350" name="Changes" comment="introduced relationship between tracks and albums, created service layer for dynamic entities.">
       <change beforePath="$PROJECT_DIR$/src/main/java/laurriana/mymelomate/model/Album.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/laurriana/mymelomate/model/Album.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/laurriana/mymelomate/model/Artist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/laurriana/mymelomate/model/Artist.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/laurriana/mymelomate/model/Tag.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/laurriana/mymelomate/model/Tag.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/laurriana/mymelomate/model/Track.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/laurriana/mymelomate/model/Track.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/laurriana/mymelomate/repository/TrackRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/laurriana/mymelomate/repository/TrackRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,7 +145,7 @@
       <workItem from="1736025201736" duration="69000" />
       <workItem from="1736025292609" duration="2394000" />
       <workItem from="1736040984462" duration="170000" />
-      <workItem from="1736051902749" duration="2868000" />
+      <workItem from="1736051902749" duration="3200000" />
     </task>
     <task id="LOCAL-00001" summary="added controller for albums">
       <option name="closed" value="true" />
@@ -469,7 +459,15 @@
       <option name="project" value="LOCAL" />
       <updated>1736026483174</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="introduced relationship between tracks and albums, created service layer for dynamic entities.">
+      <option name="closed" value="true" />
+      <created>1736064014956</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1736064014956</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -494,7 +492,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="jdbc dialect ;-;" />
     <MESSAGE value="jdbc dialect ;-; removed!" />
     <MESSAGE value="2 baddies 1 porsche" />
     <MESSAGE value="save new artist if they don't exist" />
@@ -519,6 +516,7 @@
     <MESSAGE value="removed duplicate in allowed origins from WebConfig" />
     <MESSAGE value="added localhost to allowed origins" />
     <MESSAGE value="added patch method for images" />
-    <option name="LAST_COMMIT_MESSAGE" value="added patch method for images" />
+    <MESSAGE value="introduced relationship between tracks and albums, created service layer for dynamic entities." />
+    <option name="LAST_COMMIT_MESSAGE" value="introduced relationship between tracks and albums, created service layer for dynamic entities." />
   </component>
 </project>

@@ -16,9 +16,8 @@ public class Album {
     private String url;
     private String  image;
 
-    @OneToMany(mappedBy = "album")
+    @OneToMany(mappedBy = "album", cascade = CascadeType.ALL)
     private Set<Track> trackSet;
-
 
     public int getId() {
         return id;

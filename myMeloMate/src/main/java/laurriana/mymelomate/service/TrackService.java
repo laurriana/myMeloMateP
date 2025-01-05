@@ -15,6 +15,7 @@ public class TrackService {
     @Autowired
     AlbumRepository albumRepository;
 
+
     public Track updateTrackAlbum(int trackId, int albumId) {
         Track track = repository.findById(trackId).orElseThrow(() -> new RuntimeException(String.format("Track with id %d not found", trackId)));
         Album album = albumRepository.findById(albumId).orElseThrow(() -> new RuntimeException(String.format("Album with id %d not found", albumId)));

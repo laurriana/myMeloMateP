@@ -13,6 +13,8 @@ public interface TrackRepository extends JpaRepository<Track, Integer> {
     Track findTopByArtistContainsIgnoreCaseOrderByPlaycountDesc(String artist);
 
     // list methods
+    List<Track> findByAlbumId(int id);
+
     List<Track> findTracksByPlaycount(int n);
     List<Track> findTracksByPlaycountLessThanEqual(int n);
     List<Track> findTracksByPlaycountGreaterThanEqual(int n);

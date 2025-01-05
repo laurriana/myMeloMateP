@@ -53,6 +53,11 @@ public class TrackController {
     }
 
     /* LIST METHODS */
+    @GetMapping("/all/album/{id}")
+    public List<Track> getTrackByAlbum(@PathVariable int id) {
+        return repository.findByAlbumId(id);
+    }
+
     @GetMapping("/all")
     public List<Track> getAllTracks() {
         return repository.findAll();
