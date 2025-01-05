@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b6040b7f-a8ad-427e-a93f-349f351ea350" name="Changes" comment="improved relationship between tracks and albums" />
+    <list default="true" id="b6040b7f-a8ad-427e-a93f-349f351ea350" name="Changes" comment="improved *bidirectional* relationship between tracks and albums">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/laurriana/mymelomate/controller/AlbumController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/laurriana/mymelomate/controller/AlbumController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/laurriana/mymelomate/model/Album.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/laurriana/mymelomate/model/Album.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/laurriana/mymelomate/service/AlbumService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/laurriana/mymelomate/service/AlbumService.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -143,7 +148,7 @@
       <workItem from="1736025292609" duration="2394000" />
       <workItem from="1736040984462" duration="170000" />
       <workItem from="1736051902749" duration="5013000" />
-      <workItem from="1736066695295" duration="1605000" />
+      <workItem from="1736066695295" duration="2529000" />
     </task>
     <task id="LOCAL-00001" summary="added controller for albums">
       <option name="closed" value="true" />
@@ -505,7 +510,15 @@
       <option name="project" value="LOCAL" />
       <updated>1736068986886</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="improved *bidirectional* relationship between tracks and albums">
+      <option name="closed" value="true" />
+      <created>1736069164302</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1736069164302</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -530,7 +543,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="improved ID handling" />
     <MESSAGE value="modified post method for tracks" />
     <MESSAGE value="condensed and improved post method for artist handling" />
     <MESSAGE value="improved delete method in tracks" />
@@ -555,6 +567,7 @@
     <MESSAGE value="found the root of the problem :)" />
     <MESSAGE value="removed the image property from Track, improved bidirectional relationship between tracks and albums" />
     <MESSAGE value="improved relationship between tracks and albums" />
-    <option name="LAST_COMMIT_MESSAGE" value="improved relationship between tracks and albums" />
+    <MESSAGE value="improved *bidirectional* relationship between tracks and albums" />
+    <option name="LAST_COMMIT_MESSAGE" value="improved *bidirectional* relationship between tracks and albums" />
   </component>
 </project>

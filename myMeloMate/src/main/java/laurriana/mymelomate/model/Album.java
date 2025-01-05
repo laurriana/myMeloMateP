@@ -21,7 +21,7 @@ public class Album {
 
     @JsonManagedReference
     @OneToMany(mappedBy = "album", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    private Set<Track> trackSet = new HashSet<>();
+    private Set<Track> tracks = new HashSet<>();
 
     public int getId() {
         return id;
@@ -72,10 +72,10 @@ public class Album {
     }
 
     public Set<Track> getTrackSet() {
-        return trackSet;
+        return tracks;
     }
 
     public void setTrackSet(Set<Track> trackSet) {
-        this.trackSet = trackSet;
+        this.tracks = trackSet;
     }
 }

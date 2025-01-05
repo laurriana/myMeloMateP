@@ -1,7 +1,9 @@
 package laurriana.mymelomate.controller;
 
 import laurriana.mymelomate.model.Album;
+import laurriana.mymelomate.model.Track;
 import laurriana.mymelomate.repository.AlbumRepository;
+import laurriana.mymelomate.service.AlbumService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -16,6 +18,9 @@ import java.util.Map;
 public class AlbumController {
     @Autowired
     AlbumRepository repository;
+
+    @Autowired
+    AlbumService service;
 
     // get album from id
     @GetMapping("/{id}")
@@ -101,6 +106,11 @@ public class AlbumController {
         }
     }
 
+    // update playcount
+    @PatchMapping("/update/playcount/{id}")
+        public Album updateAlbumPlays(@PathVariable int id) {
+            return service.updatePlaycount(id);
+    }
 
 }
 
