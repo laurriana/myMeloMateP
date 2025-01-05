@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="ANALYZE_INJECTED_CODE" value="false" />
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b6040b7f-a8ad-427e-a93f-349f351ea350" name="Changes" comment="fixed renaming issue">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/laurriana/mymelomate/model/Track.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/laurriana/mymelomate/model/Track.java" afterDir="false" />
-    </list>
+    <list default="true" id="b6040b7f-a8ad-427e-a93f-349f351ea350" name="Changes" comment="tidied up. found another workaround for infinite json recursion." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -54,40 +54,41 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Maven.myMeloMate [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.myMeloMate [test].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.myMeloMate [validate].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.myMeloMate [verify].executor&quot;: &quot;Run&quot;,
-    &quot;Notification.DisplayName-DoNotAsk-Vcs Notifications&quot;: &quot;VCS notifications&quot;,
-    &quot;Notification.DoNotAsk-Vcs Notifications&quot;: &quot;true&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;Spring Boot.MyMeloMateApplication.executor&quot;: &quot;Run&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/lauriana/portfolio/myMeloMateP/myMeloMate/src/main/resources&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;9b2b6bfe0bf2f02b4a0256aa224ff618&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Maven.myMeloMate [clean].executor": "Run",
+    "Maven.myMeloMate [test].executor": "Run",
+    "Maven.myMeloMate [validate].executor": "Run",
+    "Maven.myMeloMate [verify].executor": "Run",
+    "Notification.DisplayName-DoNotAsk-Vcs Notifications": "VCS notifications",
+    "Notification.DoNotAsk-Vcs Notifications": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "Spring Boot.MyMeloMateApplication.executor": "Run",
+    "WebServerToolWindowFactoryState": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/lauriana/portfolio/myMeloMateP/myMeloMate/src/main/resources",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "run.code.analysis.last.selected.profile": "aDefault",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "spring.configuration.checksum": "9b2b6bfe0bf2f02b4a0256aa224ff618",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources" />
@@ -146,7 +147,7 @@
       <workItem from="1736025292609" duration="2394000" />
       <workItem from="1736040984462" duration="170000" />
       <workItem from="1736051902749" duration="5013000" />
-      <workItem from="1736066695295" duration="3668000" />
+      <workItem from="1736066695295" duration="4068000" />
     </task>
     <task id="LOCAL-00001" summary="added controller for albums">
       <option name="closed" value="true" />
@@ -532,7 +533,15 @@
       <option name="project" value="LOCAL" />
       <updated>1736070704064</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="tidied up. found another workaround for infinite json recursion.">
+      <option name="closed" value="true" />
+      <created>1736071477458</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1736071477458</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -557,7 +566,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="improved delete method in tracks" />
     <MESSAGE value="runtime exception logging" />
     <MESSAGE value="(more) runtime exception logging" />
     <MESSAGE value="(more x2) runtime exception logging" />
@@ -582,6 +590,7 @@
     <MESSAGE value="improved *bidirectional* relationship between tracks and albums" />
     <MESSAGE value="added update playcount method for albums (for testing atm)" />
     <MESSAGE value="fixed renaming issue" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed renaming issue" />
+    <MESSAGE value="tidied up. found another workaround for infinite json recursion." />
+    <option name="LAST_COMMIT_MESSAGE" value="tidied up. found another workaround for infinite json recursion." />
   </component>
 </project>
