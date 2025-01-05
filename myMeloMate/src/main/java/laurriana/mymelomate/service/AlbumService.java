@@ -15,7 +15,7 @@ public class AlbumService {
         Album album = repository.findById(id).orElseThrow(() -> new RuntimeException(String.format("Could not find album of id %d", id)));
 
         int newPlaycount = 0;
-        for (Track track : album.getTrackSet()) {
+        for (Track track : album.getTracks()) {
             newPlaycount += track.getPlaycount();
         }
         album.setPlaycount(newPlaycount);

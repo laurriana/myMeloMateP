@@ -71,11 +71,11 @@ public class Album {
         this.image = image;
     }
 
-    public Set<Track> getTrackSet() {
+    public Set<Track> getTracks() {
         return tracks;
     }
 
-    public void setTrackSet(Set<Track> trackSet) {
-        this.tracks = trackSet;
+    public void setTracks(Set<Track> tracks) {
+        this.tracks = tracks;
     }
 }
