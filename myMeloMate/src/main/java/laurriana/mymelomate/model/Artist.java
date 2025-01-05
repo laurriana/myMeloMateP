@@ -3,7 +3,7 @@ package laurriana.mymelomate.model;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "weekly_artist_chart")
+@Table(name = "artists")
 public class Artist {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

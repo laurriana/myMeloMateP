@@ -27,10 +27,10 @@ USE `melomate`;
 -- Table structure for table `weekly_album_chart`
 --
 
-DROP TABLE IF EXISTS `weekly_album_chart`;
+DROP TABLE IF EXISTS albums;
 /*!40101 SET @saved_cs_client = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `weekly_album_chart`
+CREATE TABLE albums
 (
     `id`        int(11) NOT NULL AUTO_INCREMENT,
     `name`      varchar(255) DEFAULT NULL,
@@ -49,10 +49,10 @@ CREATE TABLE `weekly_album_chart`
 -- Dumping data for table `weekly_album_chart`
 --
 
-LOCK TABLES `weekly_album_chart` WRITE;
-/*!40000 ALTER TABLE `weekly_album_chart`
+LOCK TABLES albums WRITE;
+/*!40000 ALTER TABLE albums
     DISABLE KEYS */;
-INSERT INTO `weekly_album_chart`
+INSERT INTO albums
 VALUES (1, 'Snow Angel (Deluxe)', 'Reneé Rapp', 65, 'https://www.last.fm/music/Rene%C3%A9+Rapp/Snow+Angel+(Deluxe)',
         'https://coverartarchive.org/release/c357419d-0aa1-4075-a8f0-234f44095287/39008551837.jpg'),
        (2, 'Ay-Yo - The 4th Album Repackage', 'NCT 127', 60,
@@ -500,7 +500,7 @@ VALUES (1, 'Snow Angel (Deluxe)', 'Reneé Rapp', 65, 'https://www.last.fm/music/
         'https://ia802901.us.archive.org/0/items/mbid-2083bc4a-410e-493d-9ecd-a8ebfdbc63d9/mbid-2083bc4a-410e-493d-9ecd-a8ebfdbc63d9-33260392223.jpg'),
        (193, 'My Secret', '水野佐彩', 1, 'https://www.last.fm/music/%E6%B0%B4%E9%87%8E%E4%BD%90%E5%BD%A9/My+Secret',
         'http://coverartarchive.org/release/1a4385c3-5197-46e0-b679-795fdbf110a6/12665555824.jpg');
-/*!40000 ALTER TABLE `weekly_album_chart`
+/*!40000 ALTER TABLE albums
     ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -508,10 +508,10 @@ UNLOCK TABLES;
 -- Table structure for table `weekly_artist_chart`
 --
 
-DROP TABLE IF EXISTS `weekly_artist_chart`;
+DROP TABLE IF EXISTS `artists`;
 /*!40101 SET @saved_cs_client = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `weekly_artist_chart`
+CREATE TABLE `artists`
 (
     `id`        int(11) NOT NULL AUTO_INCREMENT,
     `name`      varchar(255) DEFAULT NULL,
@@ -529,10 +529,10 @@ CREATE TABLE `weekly_artist_chart`
 -- Dumping data for table `weekly_artist_chart`
 --
 
-LOCK TABLES `weekly_artist_chart` WRITE;
-/*!40000 ALTER TABLE `weekly_artist_chart`
+LOCK TABLES `artists` WRITE;
+/*!40000 ALTER TABLE `artists`
     DISABLE KEYS */;
-INSERT INTO `weekly_artist_chart`
+INSERT INTO `artists`
 VALUES (1, 'NCT 127', 241, 'https://www.last.fm/music/NCT+127',
         'https://i.scdn.co/image/ab6761610000e5ebdc904dcc7399f1fd90107392'),
        (2, 'Reneé Rapp', 80, 'https://www.last.fm/music/Rene%C3%A9+Rapp',
@@ -794,7 +794,7 @@ VALUES (1, 'NCT 127', 241, 'https://www.last.fm/music/NCT+127',
         'https://i.scdn.co/image/ab67616d0000b27335aabc11c51ae46f944cb869'),
        (130, '水野佐彩', 1, 'https://www.last.fm/music/%E6%B0%B4%E9%87%8E%E4%BD%90%E5%BD%A9',
         'https://i.scdn.co/image/ab67616d0000b2734ab9413e6f4344a2b30ca5bf');
-/*!40000 ALTER TABLE `weekly_artist_chart`
+/*!40000 ALTER TABLE `artists`
     ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -802,10 +802,10 @@ UNLOCK TABLES;
 -- Table structure for table `weekly_tag_chart`
 --
 
-DROP TABLE IF EXISTS `weekly_tag_chart`;
+DROP TABLE IF EXISTS tags;
 /*!40101 SET @saved_cs_client = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `weekly_tag_chart`
+CREATE TABLE tags
 (
     `id`    int(11) NOT NULL AUTO_INCREMENT,
     `name`  varchar(255) DEFAULT NULL,
@@ -821,10 +821,10 @@ CREATE TABLE `weekly_tag_chart`
 -- Dumping data for table `weekly_tag_chart`
 --
 
-LOCK TABLES `weekly_tag_chart` WRITE;
-/*!40000 ALTER TABLE `weekly_tag_chart`
+LOCK TABLES tags WRITE;
+/*!40000 ALTER TABLE tags
     DISABLE KEYS */;
-INSERT INTO `weekly_tag_chart`
+INSERT INTO tags
 VALUES (1, 'rnb', 94),
        (2, 'pop', 75),
        (3, 'awesome', 61),
@@ -875,7 +875,7 @@ VALUES (1, 'rnb', 94),
        (48, 'jazz', 2),
        (49, 'chill', 2),
        (50, 'hot', 2);
-/*!40000 ALTER TABLE `weekly_tag_chart`
+/*!40000 ALTER TABLE tags
     ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -883,10 +883,10 @@ UNLOCK TABLES;
 -- Table structure for table `weekly_track_chart`
 --
 
-DROP TABLE IF EXISTS `weekly_track_chart`;
+DROP TABLE IF EXISTS tracks;
 /*!40101 SET @saved_cs_client = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `weekly_track_chart`
+CREATE TABLE tracks
 (
     `id`        int(11) NOT NULL AUTO_INCREMENT,
     `name`      varchar(255) DEFAULT NULL,
@@ -905,10 +905,10 @@ CREATE TABLE `weekly_track_chart`
 -- Dumping data for table `weekly_track_chart`
 --
 
-LOCK TABLES `weekly_track_chart` WRITE;
-/*!40000 ALTER TABLE `weekly_track_chart`
+LOCK TABLES tracks WRITE;
+/*!40000 ALTER TABLE tracks
     DISABLE KEYS */;
-INSERT INTO `weekly_track_chart`
+INSERT INTO tracks
 VALUES (1, 'Ay-Yo', 'NCT 127', 59, 'https://www.last.fm/music/NCT+127/_/Ay-Yo',
         'http://coverartarchive.org/release/457ac9f6-c75f-4bed-993b-3ed96679eb42/34756678490.jpg'),
        (2, 'So What Now', 'Reneé Rapp', 37, 'https://www.last.fm/music/Rene%C3%A9+Rapp/_/So+What+Now',
@@ -1550,7 +1550,7 @@ VALUES (1, 'Ay-Yo', 'NCT 127', 59, 'https://www.last.fm/music/NCT+127/_/Ay-Yo',
         'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'),
        (294, 'My Secret', '水野佐彩', 1, 'https://www.last.fm/music/%E6%B0%B4%E9%87%8E%E4%BD%90%E5%BD%A9/_/My+Secret',
         'http://coverartarchive.org/release/1a4385c3-5197-46e0-b679-795fdbf110a6/12665555824.jpg');
-/*!40000 ALTER TABLE `weekly_track_chart`
+/*!40000 ALTER TABLE tracks
     ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE = @OLD_TIME_ZONE */;

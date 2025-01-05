@@ -5,7 +5,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "weekly_tag_chart")
+@Table(name = "tags")
 public class Tag {
     @Id
     private int id;

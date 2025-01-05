@@ -2,8 +2,10 @@ package laurriana.mymelomate.model;
 
 import jakarta.persistence.*;
 
+import java.util.Set;
+
 @Entity
-@Table(name = "weekly_album_chart")
+@Table(name = "albums")
 public class Album {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -13,6 +15,10 @@ public class Album {
     private int playcount;
     private String url;
     private String  image;
+
+    @OneToMany(mappedBy = "album")
+    private Set<Track> trackSet;
+
 
     public int getId() {
         return id;

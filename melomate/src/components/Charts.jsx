@@ -6,21 +6,16 @@ function Charts() {
   useEffect(() => {
     const fetchData = async () => {
       const response = await axios.get(
-        "http://neocity.local:8084/albums/all"
+        "http://neocity.local:8084/tracks/all"
       );
       setTracks(response.data);
     };
     fetchData().catch(console.error);
   }, []);
 
-const [image, setImage] = useState([]);
 
 
-const withImage = tracks.filter(song =>
-    song.image && song.image.includes("lastfm")
-)
-
-  const listItems = withImage.map((artist) => (
+  const listItems = tracks.map((artist) => (
     <div class="card">
       <img
         src={artist.image}
@@ -28,9 +23,9 @@ const withImage = tracks.filter(song =>
         alt="..."
       />
       <div class="card-body">
-        <h5 class="card-title"> {artist.id}.) {artist.name}</h5>
+        <h5 class="card-title"> {artist.id}. {artist.name}</h5>
         <p class="card-text">
-          he loves me not, he loves me. he holds me tight, then lets me go.
+          <b>artist: </b> {artist.artist}
           <br/> <b>playcount</b>: {artist.playcount}
         </p>
         <a href={artist.url} class="btn btn-primary">

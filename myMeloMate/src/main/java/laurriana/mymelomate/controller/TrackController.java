@@ -4,6 +4,7 @@ import laurriana.mymelomate.model.Artist;
 import laurriana.mymelomate.model.Track;
 import laurriana.mymelomate.repository.ArtistRepository;
 import laurriana.mymelomate.repository.TrackRepository;
+import laurriana.mymelomate.service.TrackService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -17,8 +18,12 @@ import java.util.List;
 public class TrackController {
     @Autowired
     TrackRepository repository;
+
     @Autowired
     private ArtistRepository artistRepository;
+
+    @Autowired
+    TrackService service;
 
     // get track by id
     @GetMapping("/{id}")
@@ -168,5 +173,11 @@ public class TrackController {
         }
 
 
+    }
+
+    // associate a track with an album
+    @PatchMapping("/associate/{trackId}/{albumId}")
+    public Track associateAlbum(@PathVariable int trackId, @PathVariable int albumId) {
+       return service.updateTrackAlbum(trackId, albumId);
     }
 }
