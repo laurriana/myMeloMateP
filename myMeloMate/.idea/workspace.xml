@@ -7,7 +7,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b6040b7f-a8ad-427e-a93f-349f351ea350" name="Changes" comment="tidied up. found another workaround for infinite json recursion." />
+    <list default="true" id="b6040b7f-a8ad-427e-a93f-349f351ea350" name="Changes" comment="removed redundant albums." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -147,15 +147,7 @@
       <workItem from="1736025292609" duration="2394000" />
       <workItem from="1736040984462" duration="170000" />
       <workItem from="1736051902749" duration="5013000" />
-      <workItem from="1736066695295" duration="4068000" />
-    </task>
-    <task id="LOCAL-00001" summary="added controller for albums">
-      <option name="closed" value="true" />
-      <created>1735359989603</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1735359989603</updated>
+      <workItem from="1736066695295" duration="4534000" />
     </task>
     <task id="LOCAL-00002" summary="added controller for albums">
       <option name="closed" value="true" />
@@ -541,7 +533,15 @@
       <option name="project" value="LOCAL" />
       <updated>1736071477458</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="removed redundant albums.">
+      <option name="closed" value="true" />
+      <created>1736071921745</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1736071921750</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -566,7 +566,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="runtime exception logging" />
     <MESSAGE value="(more) runtime exception logging" />
     <MESSAGE value="(more x2) runtime exception logging" />
     <MESSAGE value="prettied toString method for Track" />
@@ -591,6 +590,7 @@
     <MESSAGE value="added update playcount method for albums (for testing atm)" />
     <MESSAGE value="fixed renaming issue" />
     <MESSAGE value="tidied up. found another workaround for infinite json recursion." />
-    <option name="LAST_COMMIT_MESSAGE" value="tidied up. found another workaround for infinite json recursion." />
+    <MESSAGE value="removed redundant albums." />
+    <option name="LAST_COMMIT_MESSAGE" value="removed redundant albums." />
   </component>
 </project>
