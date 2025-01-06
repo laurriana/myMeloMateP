@@ -1,9 +1,15 @@
 package laurriana.mymelomate.model;
 
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import jakarta.persistence.*;
+
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Table(name = "artists")
+@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
 public class Artist {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -12,6 +18,19 @@ public class Artist {
     private String url;
     private String image;
     private int playcount;
+
+    @OneToMany(mappedBy = "artist", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    private Set<Album> albums = new HashSet<>();
+
+    // no-args and full-args for convenience
+    public Artist() {}
+
+    public Artist(String name, String url, String image, int playcount) {
+        this.name = name;
+        this.url = url;
+        this.image = image;
+        this.playcount = playcount;
+    }
 
     public int getPlaycount() {
         return playcount;
@@ -51,5 +70,13 @@ public class Artist {
 
     public void setImage(String image) {
         this.image = image;
+    }
+
+    public Set<Album> getAlbums() {
+        return albums;
+    }
+
+    public void setAlbums(Set<Album> albums) {
+        this.albums = albums;
     }
 }

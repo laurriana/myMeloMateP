@@ -53,9 +53,7 @@ public class AlbumController {
     }
 
 
-    /* LIST METHODS
-    * keyboard shorcut: getls
-    * */
+
     @GetMapping("/all")
     public List<Album> getAllAlbums() {
         return repository.findAll();
@@ -92,6 +90,7 @@ public class AlbumController {
     }
 
     // other CRUD methods
+
     @PatchMapping("/update/image/{id}")
     public ResponseEntity<String> modifyImage(@PathVariable int id, @RequestBody Map<String, String> updates) {
         Album album = repository.findById(id)
@@ -103,6 +102,12 @@ public class AlbumController {
         } else {
             return  new ResponseEntity<>(String.format("Could not update image for album '%s' of id %d: 'image' key is missing or empty", album.getName(), album.getId()), HttpStatus.BAD_REQUEST);
         }
+    }
+
+    // assign an artist
+    @PatchMapping("/update/artist/{albumId}")
+    public Album updateAlbumArtist(@PathVariable int albumId, int artist) {
+        return service.updateAlbumArtist(albumId, artist);
     }
 
     // update playcount

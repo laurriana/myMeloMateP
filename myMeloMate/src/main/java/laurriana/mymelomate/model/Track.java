@@ -12,7 +12,7 @@ public class Track {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String name;
-    private String artist;
+    private String artist; // keep the artist to avoid conflicts
     private Integer playcount;
     private String url;
 
@@ -23,12 +23,19 @@ public class Track {
     public Album getAlbum() {
         return album;
     }
+    public Track() {}
+
+    public String getArtist() {
+        return artist;
+    }
+
+    public void setArtist(String artist) {
+        this.artist = artist;
+    }
 
     public void setAlbum(Album album) {
         this.album = album;
     }
-
-    public Track() {}
 
     public int getId() {
         return id;
@@ -44,14 +51,6 @@ public class Track {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public String getArtist() {
-        return artist;
-    }
-
-    public void setArtist(String artist) {
-        this.artist = artist;
     }
 
     public int getPlaycount() {
