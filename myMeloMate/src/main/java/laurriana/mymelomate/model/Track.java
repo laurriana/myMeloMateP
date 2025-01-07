@@ -1,6 +1,7 @@
 package laurriana.mymelomate.model;
 
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import jakarta.persistence.*;
 
@@ -18,6 +19,7 @@ public class Track {
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "album_id")
+    @JsonManagedReference
     private Album album;
 
     public Album getAlbum() {
