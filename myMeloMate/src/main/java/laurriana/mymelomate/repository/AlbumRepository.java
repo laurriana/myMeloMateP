@@ -11,7 +11,7 @@ public interface AlbumRepository extends JpaRepository<Album, Integer> {
     Album findTopByOrderByPlaycountDesc();
     Album findFirstByOrderByPlaycountAsc();
 
-    Album findTopByArtistContainingIgnoreCaseOrderByPlaycountDesc(String artist);
+    Album findTopByArtistNameContainingIgnoreCaseOrderByPlaycountDesc(String artist);
 
     // lists
     List<Album> findByArtistId(int n);
@@ -21,5 +21,5 @@ public interface AlbumRepository extends JpaRepository<Album, Integer> {
     List<Album> findAlbumsByPlaycountGreaterThanEqual(int n);
 
     List<Album> findAlbumsByNameContainsIgnoreCase(String s);
-    List<Album> findAlbumsByArtistContainsIgnoreCase(String s);
+    List<Album> findAlbumsByArtistNameContainsIgnoreCase(String s);
 }

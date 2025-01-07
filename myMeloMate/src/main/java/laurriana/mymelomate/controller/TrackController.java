@@ -1,5 +1,6 @@
 package laurriana.mymelomate.controller;
 
+import com.fasterxml.jackson.annotation.JsonIncludeProperties;
 import laurriana.mymelomate.model.Track;
 import laurriana.mymelomate.repository.TrackRepository;
 import laurriana.mymelomate.service.TrackService;
@@ -54,6 +55,7 @@ public class TrackController {
     }
 
     @GetMapping("/all")
+    @JsonIncludeProperties({"id", "name", "playcount", "url", "artist"})
     public List<Track> getAllTracks() {
         return repository.findAll();
     }

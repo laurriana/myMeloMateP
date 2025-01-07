@@ -49,7 +49,7 @@ public class AlbumController {
     // get top album by artist
     @GetMapping("/topByArtist")
     public Album getTopArtistAlbum(String artist) {
-        return repository.findTopByArtistContainingIgnoreCaseOrderByPlaycountDesc(artist);
+        return repository.findTopByArtistNameContainingIgnoreCaseOrderByPlaycountDesc(artist);
     }
 
     @GetMapping("/all")
@@ -84,7 +84,7 @@ public class AlbumController {
     // get all albums by artist
     @GetMapping("/allByArtist")
     public List<Album> getAllByArtist(String artist) {
-        return repository.findAlbumsByArtistContainsIgnoreCase(artist);
+        return repository.findAlbumsByArtistNameContainsIgnoreCase(artist);
     }
 
     // other CRUD methods
@@ -95,8 +95,8 @@ public class AlbumController {
 
     // assign an artist
     @PatchMapping("/update/artist/{albumId}")
-    public Album updateAlbumArtist(@PathVariable int albumId, int artist) {
-        return service.updateAlbumArtist(albumId, artist);
+    public Album updateAlbumArtist(@PathVariable int albumId, int artistId) {
+        return service.updateAlbumArtist(albumId, artistId);
     }
 
     // update playcount

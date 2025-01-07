@@ -77,6 +77,11 @@ public class ArtistController {
         return service.updateArtistPlaycount(id);
     }
 
+    @PatchMapping("/update/albums/{id}")
+    public ResponseEntity<Artist> updateAlbums(@PathVariable int id) {
+        return service.updateArtistAlbums(id);
+    }
+
     @DeleteMapping("/delete/{id}")
     public String handleDelete(@PathVariable int id) {
         try {

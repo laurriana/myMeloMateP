@@ -1,5 +1,4 @@
 package laurriana.mymelomate.model;
-
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 
@@ -14,7 +13,7 @@ public class Track {
     private Integer playcount;
     private String url;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
     private Artist artist;
 
     @ManyToOne(fetch = FetchType.EAGER)
