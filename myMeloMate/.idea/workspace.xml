@@ -7,7 +7,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b6040b7f-a8ad-427e-a93f-349f351ea350" name="Changes" comment="modified json serialization issues on Albums and Tracks" />
+    <list default="true" id="b6040b7f-a8ad-427e-a93f-349f351ea350" name="Changes" comment="removed unnecessary imports">
+      <change beforePath="$PROJECT_DIR$/../demos/data/no_img.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demos/data/track_albums.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demos/data/wrong_img.csv" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -148,14 +152,6 @@
       <workItem from="1736040984462" duration="170000" />
       <workItem from="1736051902749" duration="5013000" />
       <workItem from="1736066695295" duration="4534000" />
-    </task>
-    <task id="LOCAL-00003" summary="added controller methods for tracks + unforeseen post and delete method :)">
-      <option name="closed" value="true" />
-      <created>1735368980917</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1735368980917</updated>
     </task>
     <task id="LOCAL-00004" summary="added cors mapping config file">
       <option name="closed" value="true" />
@@ -541,7 +537,15 @@
       <option name="project" value="LOCAL" />
       <updated>1736231008632</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="removed unnecessary imports">
+      <option name="closed" value="true" />
+      <created>1736231291468</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1736231291468</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -566,7 +570,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="(more x2) runtime exception logging" />
     <MESSAGE value="prettied toString method for Track" />
     <MESSAGE value="introduced delete method for artists" />
     <MESSAGE value="added collation for stable encoding" />
@@ -591,6 +594,7 @@
     <MESSAGE value="tidied up. found another workaround for infinite json recursion." />
     <MESSAGE value="removed redundant albums." />
     <MESSAGE value="modified json serialization issues on Albums and Tracks" />
-    <option name="LAST_COMMIT_MESSAGE" value="modified json serialization issues on Albums and Tracks" />
+    <MESSAGE value="removed unnecessary imports" />
+    <option name="LAST_COMMIT_MESSAGE" value="removed unnecessary imports" />
   </component>
 </project>
