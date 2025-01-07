@@ -1,8 +1,7 @@
 package laurriana.mymelomate.controller;
 
-import laurriana.mymelomate.model.Artist;
+import com.fasterxml.jackson.annotation.JsonIncludeProperties;
 import laurriana.mymelomate.model.Track;
-import laurriana.mymelomate.repository.ArtistRepository;
 import laurriana.mymelomate.repository.TrackRepository;
 import laurriana.mymelomate.service.TrackService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/tracks")
@@ -20,36 +20,32 @@ public class TrackController {
     TrackRepository repository;
 
     @Autowired
-    private ArtistRepository artistRepository;
-
-    @Autowired
     TrackService service;
 
-    // get track by id
     @GetMapping("/{id}")
-    public Track getTrackById(@PathVariable int id) {
+    public Track fetchById(@PathVariable int id) {
         return repository.findById(id)
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, String.format("Track with id %d not found", id)));
     }
 
-    @GetMapping("/byName")
-    public Track getTrackByName(String name) {
+    @GetMapping("/{name}")
+    public Track fetchByName(@PathVariable String name) {
         return repository.findTrackByName(name);
     }
 
     @GetMapping("/mostPlayed")
-    public Track getTopTrack() {
+    public Track fetchMostPlayed() {
         return repository.findTopByOrderByPlaycountDesc();
     }
 
     @GetMapping("/leastPlayed")
-    public Track getLeastPlayedTrack() {
+    public Track fetchLeastPlayed() {
         return repository.findFirstByOrderByPlaycountAscIdDesc();
     }
 
-    @GetMapping("/topArtistTrack")
-    public Track getTopArtistTrack(String artist) {
-        return repository.findTopByArtistContainsIgnoreCaseOrderByPlaycountDesc(artist);
+    @GetMapping("/mostPlayed/{artist}")
+    public Track getTopArtistTrack(@PathVariable String artist) {
+        return repository.findTopByArtistNameContainsIgnoreCaseOrderByPlaycountDesc(artist);
     }
 
     /* LIST METHODS */
@@ -59,36 +55,36 @@ public class TrackController {
     }
 
     @GetMapping("/all")
+    @JsonIncludeProperties({"id", "name", "playcount", "url", "artist"})
     public List<Track> getAllTracks() {
         return repository.findAll();
     }
 
-    @GetMapping("/allByPlaycount")
-    public List<Track> getAllByPlaycount(int playcount) {
+    @GetMapping("/all/playcount/{playcount}")
+    public List<Track> getAllByPlaycount(@PathVariable int playcount) {
         return repository.findTracksByPlaycount(playcount);
     }
 
-    @GetMapping("/allPlaycountLess")
-    public List<Track> getAllPlaycountLeq(int playcount) {
+    @GetMapping("/all/playcount/lower/{playcount}")
+    public List<Track> getAllPlaycountLeq(@PathVariable int playcount) {
         return repository.findTracksByPlaycountLessThanEqual(playcount);
     }
 
-    @GetMapping("/allPlaycountGreater")
+    @GetMapping("/all/playcount/greater/{playcount}")
     public List<Track> getAllPlaycountGreaterEq(int playcount) {
         return repository.findTracksByPlaycountGreaterThanEqual(playcount);
     }
 
-    @GetMapping("/allNameContains")
-    public List<Track> getByName(String name) {
+    @GetMapping("/all/name/{name}")
+    public List<Track> getByName(@PathVariable String name) {
         return repository.findTracksByNameContainsIgnoreCase(name);
     }
 
-    @GetMapping("/allByArtist")
-    public List<Track> getAllByArtist(String artist) {
-        return repository.findTracksByArtistContainsIgnoreCase(artist);
+    @GetMapping("/all/artist/{artist}")
+    public List<Track> getAllByArtist(@PathVariable String artist) {
+        return repository.findTracksByArtistNameContainsIgnoreCase(artist);
     }
 
-    // order bys
     @GetMapping("/all/playcount")
     public List<Track> orderPlaycount() {
         return repository.findAllByOrderByPlaycountDesc();
@@ -99,90 +95,30 @@ public class TrackController {
         return repository.findAllByOrderById();
     }
 
-    // demo methods
-    @PostMapping("/submit")
-    public ResponseEntity<String> handlePostRequest(@RequestBody Track newTrack) {
-        for (Track track : repository.findAll()) {
-            if (track.getName().equalsIgnoreCase(newTrack.getName()) && track.getArtist().equalsIgnoreCase(newTrack.getArtist())) {
-                return new ResponseEntity<>(String.format("Track “%s” by %s already exists", newTrack.getName(), newTrack.getArtist()), HttpStatus.BAD_REQUEST);
-            } else {
-                repository.save(newTrack);
-
-                // modify playcount for artist
-                Artist artist = artistRepository.findArtistByName(newTrack.getArtist());
-                if (artist != null) {
-                    int currentArtistPlaycount = artist.getPlaycount();
-                    artist.setPlaycount(currentArtistPlaycount + newTrack.getPlaycount());
-                } else {
-                    // create new artist
-                    artist = new Artist();
-                    artist.setPlaycount(newTrack.getPlaycount());
-                    artist.setName(newTrack.getArtist());
-                    artist.setImage("https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png");
-                    artist.setUrl("https://www.last.fm/user/laurriana");
-                }
-                artistRepository.save(artist);
-
-            }
-        }
-        return new ResponseEntity<>(String.format("Successfully saved track “%s” by %s", newTrack.getName(), newTrack.getArtist()), HttpStatus.OK);
+    @PostMapping("/create")
+    public ResponseEntity<String> addTrack(@RequestBody Map<String, String> newTrack) {
+        return service.createTrack(newTrack);
     }
 
-    @PutMapping("/modify")
-    public Track handlePutRequest(@RequestBody Track track) {
-        return repository.save(track);
-    }
-
-    // play track (increment of 1)
-    @PatchMapping("/play/{id}")
+    @PatchMapping("/update/play/{id}")
     public ResponseEntity<String> playTrack(@PathVariable int id) {
-        try {
-            Track track = repository.findById(id).orElseThrow(() -> new RuntimeException(String.format("Track with id %d not found", id)));
-            track.setPlaycount(track.getPlaycount() + 1);
-            repository.save(track);
-
-            // increment artist playcount
-            Artist artist = artistRepository.findArtistByName(track.getArtist());
-            int currentArtistPlaycount = artist.getPlaycount();
-            artist.setPlaycount(currentArtistPlaycount + 1);
-            artistRepository.save(artist);
-
-            return new ResponseEntity<>(String.format("Successfully played track of id %d", id), HttpStatus.OK);
-
-        } catch (RuntimeException e) {
-            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
-        }
+       return service.incrementTrackPlaycount(id);
     }
 
     @DeleteMapping("/delete/{id}")
-    public String handleDelete(@PathVariable int id) {
-        try {
-            Track track = repository.findById(id).orElseThrow(() -> new RuntimeException(String.format("Couldn't find track of id %d", id)));
-
-            String trackName = track.getName();
-            String trackArtist = track.getArtist();
-            int trackId = track.getId();
-
-            // delete artist playcount
-            Artist artist = artistRepository.findArtistByName(trackArtist);
-            if (artist != null && track.getPlaycount() <= artist.getPlaycount()) {
-                int artistPlaycount = artist.getPlaycount();
-                artist.setPlaycount(artistPlaycount - track.getPlaycount());
-                artistRepository.save(artist);
-            }
-            repository.deleteById(trackId);
-
-            return String.format("Successfully deleted %s by %s of id %d", trackName, trackArtist, trackId);
-        } catch (RuntimeException e) {
-            return String.format("Internal server error: %s", e.getMessage());
-        }
-
-
+    public ResponseEntity<String> handleDelete(@PathVariable int id) {
+        return service.deleteTrack(id);
     }
 
     // associate a track with an album
-    @PatchMapping("/associate/{trackId}/{albumId}")
-    public Track associateAlbum(@PathVariable int trackId, @PathVariable int albumId) {
+    @PatchMapping("/update/album/{trackId}")
+    public Track associateAlbum(@PathVariable int trackId, int albumId) {
        return service.updateTrackAlbum(trackId, albumId);
+    }
+
+    // associate a track with an artist
+    @PatchMapping("/update/artist/{trackId}")
+    public ResponseEntity<Void> associateArtist(@PathVariable int trackId, int artistId) {
+        return service.updateArtist(trackId, artistId);
     }
 }
