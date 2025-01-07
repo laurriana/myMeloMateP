@@ -7,32 +7,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b6040b7f-a8ad-427e-a93f-349f351ea350" name="Changes" comment="major: improved track creation method, introduced artist update play count method, introduced track association to artist.">
+    <list default="true" id="b6040b7f-a8ad-427e-a93f-349f351ea350" name="Changes" comment="improved deserialization">
       <change beforePath="$PROJECT_DIR$/../demos/python/patch_albums.py" beforeDir="false" afterPath="$PROJECT_DIR$/../demos/python/patch_albums.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/laurriana/mymelomate/controller/AlbumController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/laurriana/mymelomate/controller/AlbumController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/laurriana/mymelomate/controller/ArtistController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/laurriana/mymelomate/controller/ArtistController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/laurriana/mymelomate/controller/TrackController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/laurriana/mymelomate/controller/TrackController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/laurriana/mymelomate/model/Album.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/laurriana/mymelomate/model/Album.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/laurriana/mymelomate/model/Artist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/laurriana/mymelomate/model/Artist.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/laurriana/mymelomate/model/Track.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/laurriana/mymelomate/model/Track.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/laurriana/mymelomate/repository/AlbumRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/laurriana/mymelomate/repository/AlbumRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/laurriana/mymelomate/service/ArtistService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/laurriana/mymelomate/service/ArtistService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/laurriana/mymelomate/MyMeloMateApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/laurriana/mymelomate/MyMeloMateApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/laurriana/mymelomate/controller/AlbumController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/laurriana/mymelomate/controller/AlbumController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/laurriana/mymelomate/controller/ArtistController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/laurriana/mymelomate/controller/ArtistController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/laurriana/mymelomate/controller/TrackController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/laurriana/mymelomate/controller/TrackController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/laurriana/mymelomate/model/Album.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/laurriana/mymelomate/model/Album.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/laurriana/mymelomate/model/Artist.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/laurriana/mymelomate/model/Artist.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/laurriana/mymelomate/model/Track.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/laurriana/mymelomate/model/Track.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/laurriana/mymelomate/repository/AlbumRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/laurriana/mymelomate/repository/AlbumRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/laurriana/mymelomate/repository/ArtistRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/laurriana/mymelomate/repository/ArtistRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/laurriana/mymelomate/repository/TrackRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/laurriana/mymelomate/repository/TrackRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/laurriana/mymelomate/service/AlbumService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/laurriana/mymelomate/service/AlbumService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/laurriana/mymelomate/service/ArtistService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/laurriana/mymelomate/service/ArtistService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/laurriana/mymelomate/service/TrackService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/laurriana/mymelomate/service/TrackService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,7 +80,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Spring Boot.MyMeloMateApplication.executor": "Run",
     "WebServerToolWindowFactoryState": "true",
-    "git-widget-placeholder": "dev",
+    "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/lauriana/portfolio/myMeloMateP/myMeloMate/src/main/resources",
     "node.js.detected.package.eslint": "true",

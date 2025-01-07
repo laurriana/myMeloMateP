@@ -1,7 +1,7 @@
 import requests # type: ignore
 from csv import DictReader
 
-PATCH_URL = "http://localhost:8084/tracks/update/album/{trackId}?albumId={albumId}"
+PATCH_URL = "http://neocity.local:8084/tracks/update/album/{trackId}?albumId={albumId}"
 
 hrs = {
     "Connection": "close",
