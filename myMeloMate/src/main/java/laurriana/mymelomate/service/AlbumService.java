@@ -7,8 +7,11 @@ import laurriana.mymelomate.repository.AlbumRepository;
 import laurriana.mymelomate.repository.ArtistRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
+
+import java.util.Map;
 
 @Service
 public class AlbumService {
@@ -36,5 +39,17 @@ public class AlbumService {
 
         album.setArtist(artist);
         return repository.save(album);
+    }
+
+    public ResponseEntity<String> updateImage(int id, Map<String, String> updates) {
+        Album album = repository.findById(id)
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, String.format("Album of id %d not found", id)));
+        if (updates.containsKey("image") && updates.get("image") != null && !updates.get("image").isEmpty()) {
+            album.setImage(updates.get("image"));
+            repository.save(album);
+            return new ResponseEntity<>(String.format("Successfully updated image for album '%s' of id %d", album.getName(), album.getId()), HttpStatus.OK);
+        } else {
+            return  new ResponseEntity<>(String.format("Could not update image for album '%s' of id %d: 'image' key is missing or empty", album.getName(), album.getId()), HttpStatus.BAD_REQUEST);
+        }
     }
 }

@@ -8,14 +8,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b6040b7f-a8ad-427e-a93f-349f351ea350" name="Changes" comment="misplaced @JsonIdentityInfo annotation">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/laurriana/mymelomate/controller/AlbumController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/laurriana/mymelomate/controller/AlbumController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/laurriana/mymelomate/controller/ArtistController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/laurriana/mymelomate/controller/ArtistController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/laurriana/mymelomate/controller/TrackController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/laurriana/mymelomate/controller/TrackController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/laurriana/mymelomate/model/Album.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/laurriana/mymelomate/model/Album.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/laurriana/mymelomate/model/Artist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/laurriana/mymelomate/model/Artist.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/laurriana/mymelomate/model/Track.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/laurriana/mymelomate/model/Track.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/laurriana/mymelomate/repository/AlbumRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/laurriana/mymelomate/repository/AlbumRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/laurriana/mymelomate/repository/ArtistRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/laurriana/mymelomate/repository/ArtistRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/laurriana/mymelomate/repository/TrackRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/laurriana/mymelomate/repository/TrackRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/laurriana/mymelomate/service/AlbumService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/laurriana/mymelomate/service/AlbumService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/laurriana/mymelomate/service/ArtistService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/laurriana/mymelomate/service/ArtistService.java" afterDir="false" />
@@ -37,6 +38,11 @@
   </component>
   <component name="Git.Settings">
     <option name="PUSH_AUTO_UPDATE" value="true" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -70,6 +76,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "JavaMethodFindUsagesOptions.isSearchForTextOccurrences": "true",
     "Maven.myMeloMate [clean].executor": "Run",
     "Maven.myMeloMate [test].executor": "Run",
     "Maven.myMeloMate [validate].executor": "Run",
@@ -85,7 +92,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Spring Boot.MyMeloMateApplication.executor": "Run",
     "WebServerToolWindowFactoryState": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "dev",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/lauriana/portfolio/myMeloMateP/myMeloMate/src/main/resources",
     "node.js.detected.package.eslint": "true",

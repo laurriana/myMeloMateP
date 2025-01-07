@@ -6,6 +6,8 @@ import java.util.List;
 
 public interface AlbumRepository extends JpaRepository<Album, Integer> {
     Album findAlbumByName(String name);
+    Album findAlbumByNameIgnoreCase(String name);
+
     Album findTopByOrderByPlaycountDesc();
     Album findFirstByOrderByPlaycountAsc();
 

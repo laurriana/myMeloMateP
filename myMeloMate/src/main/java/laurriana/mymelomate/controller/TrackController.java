@@ -1,8 +1,6 @@
 package laurriana.mymelomate.controller;
 
-import laurriana.mymelomate.model.Artist;
 import laurriana.mymelomate.model.Track;
-import laurriana.mymelomate.repository.ArtistRepository;
 import laurriana.mymelomate.repository.TrackRepository;
 import laurriana.mymelomate.service.TrackService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/tracks")
@@ -45,7 +44,7 @@ public class TrackController {
 
     @GetMapping("/mostPlayed/{artist}")
     public Track getTopArtistTrack(@PathVariable String artist) {
-        return repository.findTopByArtistContainsIgnoreCaseOrderByPlaycountDesc(artist);
+        return repository.findTopByArtistNameContainsIgnoreCaseOrderByPlaycountDesc(artist);
     }
 
     /* LIST METHODS */
@@ -81,7 +80,7 @@ public class TrackController {
 
     @GetMapping("/all/artist/{artist}")
     public List<Track> getAllByArtist(@PathVariable String artist) {
-        return repository.findTracksByArtistContainsIgnoreCase(artist);
+        return repository.findTracksByArtistNameContainsIgnoreCase(artist);
     }
 
     @GetMapping("/all/playcount")
@@ -95,7 +94,7 @@ public class TrackController {
     }
 
     @PostMapping("/create")
-    public ResponseEntity<String> addTrack(@RequestBody Track newTrack) {
+    public ResponseEntity<String> addTrack(@RequestBody Map<String, String> newTrack) {
         return service.createTrack(newTrack);
     }
 
@@ -111,7 +110,13 @@ public class TrackController {
 
     // associate a track with an album
     @PatchMapping("/update/album/{trackId}")
-    public Track associateAlbum(@PathVariable int trackId, @PathVariable int albumId) {
+    public Track associateAlbum(@PathVariable int trackId, int albumId) {
        return service.updateTrackAlbum(trackId, albumId);
+    }
+
+    // associate a track with an artist
+    @PatchMapping("/update/artist/{trackId}")
+    public ResponseEntity<Void> associateArtist(@PathVariable int trackId, int artistId) {
+        return service.updateArtist(trackId, artistId);
     }
 }

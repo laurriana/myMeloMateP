@@ -2,11 +2,14 @@ package laurriana.mymelomate.controller;
 
 import laurriana.mymelomate.model.Artist;
 import laurriana.mymelomate.repository.ArtistRepository;
+import laurriana.mymelomate.service.ArtistService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
+import java.util.HashMap;
 import java.util.List;
 
 @RestController
@@ -14,6 +17,9 @@ import java.util.List;
 public class ArtistController {
     @Autowired
     ArtistRepository repository;
+
+    @Autowired
+    ArtistService service;
 
     @GetMapping("/{id}")
     public Artist getArtistById(@PathVariable int id) {
@@ -59,6 +65,16 @@ public class ArtistController {
     @GetMapping("/allNameContains")
     public List<Artist> getByName(String name) {
         return repository.findArtistByNameContainingIgnoreCase(name);
+    }
+
+    @PostMapping("/create")
+    public ResponseEntity<Artist> createArtist(@RequestBody HashMap<String, String> artist) {
+        return service.addArtist(artist);
+    }
+
+    @PatchMapping("/update/{id}")
+    public ResponseEntity<Artist> updateArtistPlays(@PathVariable int id) {
+        return service.updateArtistPlaycount(id);
     }
 
     @DeleteMapping("/delete/{id}")

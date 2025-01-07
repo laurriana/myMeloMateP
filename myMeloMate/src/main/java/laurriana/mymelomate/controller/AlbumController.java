@@ -52,8 +52,6 @@ public class AlbumController {
         return repository.findTopByArtistContainingIgnoreCaseOrderByPlaycountDesc(artist);
     }
 
-
-
     @GetMapping("/all")
     public List<Album> getAllAlbums() {
         return repository.findAll();
@@ -90,18 +88,9 @@ public class AlbumController {
     }
 
     // other CRUD methods
-
     @PatchMapping("/update/image/{id}")
     public ResponseEntity<String> modifyImage(@PathVariable int id, @RequestBody Map<String, String> updates) {
-        Album album = repository.findById(id)
-                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, String.format("Album of id %d not found", id)));
-        if (updates.containsKey("image") && updates.get("image") != null && !updates.get("image").isEmpty()) {
-            album.setImage(updates.get("image"));
-            repository.save(album);
-            return new ResponseEntity<>(String.format("Successfully updated image for album '%s' of id %d", album.getName(), album.getId()), HttpStatus.OK);
-        } else {
-            return  new ResponseEntity<>(String.format("Could not update image for album '%s' of id %d: 'image' key is missing or empty", album.getName(), album.getId()), HttpStatus.BAD_REQUEST);
-        }
+        return service.updateImage(id, updates);
     }
 
     // assign an artist

@@ -9,7 +9,6 @@ import java.util.Set;
 
 @Entity
 @Table(name = "artists")
-@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
 public class Artist {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,14 +21,13 @@ public class Artist {
     @OneToMany(mappedBy = "artist", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private Set<Album> albums = new HashSet<>();
 
-    // no-args and full-args for convenience
+    // no-args and select-args for convenience
     public Artist() {}
 
-    public Artist(String name, String url, String image, int playcount) {
+    public Artist(String name, String url, String image) {
         this.name = name;
         this.url = url;
         this.image = image;
-        this.playcount = playcount;
     }
 
     public int getPlaycount() {

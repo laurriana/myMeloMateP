@@ -13,6 +13,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.server.ResponseStatusException;
 
+import java.util.Map;
+
 @Service
 public class TrackService {
     @Autowired
@@ -27,25 +29,52 @@ public class TrackService {
     @Autowired
     ArtistService artistService;
 
-    public ResponseEntity<String> createTrack(@RequestBody Track track) {
+    public ResponseEntity<Void> updateArtist(int trackId, int artistId) {
+        Track track = repository.findById(trackId).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, String.format("Track with id %d not found", trackId)));
+        Artist artist = artistRepository.findById(artistId).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, String.format("Artist with id %d not found", artistId)));
+
+        track.setArtist(artist);
+        repository.save(track);
+
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+    }
+
+    public ResponseEntity<String> createTrack(Map<String, String> trackData) {
+        String trackName = trackData.get("name");
+        String trackArtist = trackData.get("artist");
+        String trackAlbum = trackData.get("album");
+        String trackUrl = trackData.get("url");
+        int trackPlaycount = Integer.parseInt(trackData.get("playcount"));
+
         for (Track t : repository.findAll()) {
-            if (t.getName().equalsIgnoreCase(track.getName()) && t.getArtist().equalsIgnoreCase(track.getArtist())) {
-                return ResponseEntity.status(HttpStatus.CONFLICT)
-                        .body(String.format("Could not create track with the name '%s' and the artist '%s', as it already exists.", track.getName(), track.getArtist()));
+            if (trackName.equalsIgnoreCase(t.getName()) && trackArtist.equalsIgnoreCase(t.getArtist().getName())) {
+                return ResponseEntity.status(HttpStatus.CONFLICT).body(null);
             } else {
-                Artist artist = artistRepository.findArtistByName(track.getName());
+                Artist artist = artistRepository.findArtistByNameIgnoreCase(trackArtist);
                 if (artist != null) {
-                    artist.setPlaycount(artist.getPlaycount() + track.getPlaycount());
+                    artist.setPlaycount(artist.getPlaycount() + trackPlaycount);
                 } else {
-                    // create new artist
-                    artist = new Artist(track.getName(), "https://www.last.fm/user/laurriana", "https://lastfm.freetls.fastly.net/i/u/174s/1b3c1507a905b6c40475d0d565f6bebc.png", track.getPlaycount());
+                    artist = new Artist(trackArtist, "https://www.last.fm/user/laurriana", "https://lastfm.freetls.fastly.net/i/u/174s/1b3c1507a905b6c40475d0d565f6bebc.png");
+                    artist.setPlaycount(trackPlaycount);
                 }
+                // i have to link the new album to the artist. save all if successful
+                Album album = albumRepository.findAlbumByNameIgnoreCase(trackAlbum);
+
+                if (album != null) {
+                    album.setPlaycount(album.getPlaycount() + trackPlaycount);
+                } else {
+                    album = new Album(trackAlbum, trackPlaycount, "https://www.last.fm/user/laurriana", "https://lastfm.freetls.fastly.net/i/u/174s/1b3c1507a905b6c40475d0d565f6bebc.png");
+                    album.setArtist(artist);
+                }
+
+                Track track = new Track(trackName, trackPlaycount, trackUrl);
+                album.getTracks().add(track);
                 repository.save(track);
-                artistRepository.save(artist);
+                albumRepository.save(album);
             }
         }
         return ResponseEntity.status(HttpStatus.CREATED)
-                .body(String.format("Created track with name '%s' and artist '%s'.", track.getName(), track.getArtist()));
+                .body(String.format("Created track with name '%s' and artist '%s'", trackName, trackArtist));
     }
 
     public Track updateTrackAlbum(int trackId, int albumId) {
@@ -72,7 +101,7 @@ public class TrackService {
 
     public ResponseEntity<String> deleteTrack(int id) {
         Track track = repository.findById(id).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, String.format("Track with id %d not found", id)));
-        Artist artist = artistRepository.findArtistByName(track.getArtist());
+        Artist artist = artistRepository.findArtistByName(track.getArtist().getName());
         Album album = track.getAlbum();
 
         String trackName = track.getName();
