@@ -8,7 +8,7 @@ import Charts from "./components/Charts.jsx";
 
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
-import "./stylesheets/improved.scss"
+import "./stylesheets/main.scss"
 
 function Layout() {
   return (

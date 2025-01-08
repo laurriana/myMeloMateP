@@ -2,6 +2,44 @@
 
 $container-shadow: 0rem 0rem 0.875rem 0rem rgba(81, 117, 143, 0.4);
 $container-radius: 0.75rem;
+$smooth: all 0.25s ease-in-out;
+
+@keyframes open-animation {
+  0% {
+    opacity: 0;
+    transform: translateY(-15%);
+  }
+  100% {
+    opacity: 100;
+    transform: translateY(0%);
+  }
+}
+
+@keyframes close-animation {
+  0% {
+    opacity: 100;
+    transform: translateY(0%);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-15%);
+  }
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(10deg);
+  }
+  25% {
+    transform: rotate(-3deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+  75% {
+    transform: rotate(0deg);
+  }
+}
 
 :root {
   padding: 2vmax;
@@ -44,7 +82,7 @@ nav {
     font-size: 0.85em;
     font-weight: 600;
     text-decoration: none;
-    transition: all 0.25s ease-in-out;
+    transition: $smooth;
     &:hover {
       color: #55b0f0;
       font-size: 0.95em;
@@ -68,24 +106,84 @@ nav {
   }
 }
 
-
 /* profile icon */
-.profile-icon {
-  align-items: center;
-  background-color: white;
-  border-radius: 0.75rem;
-  box-shadow: $container-radius;
-  justify-content: center;
-  padding: 1em;
+.icon-closed {
+  width: 50px;
+  height: 50px;
   position: relative;
+  z-index: 3;
+  border-radius: 0.65rem;
+  box-shadow: $container-shadow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: $smooth;
+
+  i {
+    transform: scale(1.2);
+    transition: $smooth;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+  }
 }
 
-.profile-img {
-  background: none;
-  color: inherit;
-  border: 0;
-  padding: 0;
-  outline: inherit;
+.icon-open {
+  width: 32px;
+  height: 140px;
+  border-radius: $container-radius;
+  position: absolute;
+  background: #fff;
+  z-index: 2;
+  padding: 0.5rem 1.5rem;
+  box-shadow: $container-shadow;
+  opacity: 0;
+  top: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  animation: close-animation 0.3s ease-out;
+
+  i {
+    color :#2087d0;
+    opacity: 75%;
+    transition: all 0.15s ease-in-out;
+    &:hover {
+      opacity: 100%;
+    }
+  }
+
+}
+
+input {
+  cursor: pointer;
+  position: absolute;
+  z-index: 5;
+  opacity: 0;
+  margin-top: 1.15em;
+  width: 3.15em;
+  transform: scale(1.75);
+
+  &:checked {
+    ~ .icon-open {
+      opacity: 1;
+      animation: open-animation 0.3s ease-in-out;
+    }
+    ~.icon-closed {
+      animation: wiggle 0.65s ease-in-out;
+    }
+  }
+
+  &:hover {
+    ~ .icon-closed i {
+      color: #caa811;
+    }
+  }
 }
 
 /* home page */

@@ -2,6 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 
 function Navbar() {
+
   return (
     <div className="navbar">
       <nav>
@@ -24,12 +25,28 @@ function Navbar() {
         </ul>
       </nav>
 
-      <div className="profile-icon">
-        <button className="profile-img">
-          <i class="bi bi-person-circle"></i>
-        </button>
+      {/* profile section */}
+      <div className="wrapper">
+        <input type="checkbox" />
+        <div className="icon-closed">
+          <i class="bi bi-person-circle" />
+        </div>
+
+        <div className="icon-open">
+          <NavLink to="/profile">
+            <i class="bi bi-person-vcard-fill" />
+          </NavLink>
+          <NavLink to="/mood-tracker">
+            <i class="bi bi-heart-pulse-fill" />
+          </NavLink>
+          <NavLink to="/achievements">
+            <i class="bi bi-trophy-fill" />
+          </NavLink>
+          <NavLink to="/about">
+            <i class="bi bi-card-text" />
+          </NavLink>
+        </div>
       </div>
-      
     </div>
   );
 }
