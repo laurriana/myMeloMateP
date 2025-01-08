@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Didact+Gothic&family=MuseoModerno:ital,wght@0,100..900;1,100..900&family=Parkinsans:wght@300..800&display=swap");
+
+$container-shadow: 0rem 0rem 0.875rem 0rem rgba(81, 117, 143, 0.4);
+$container-radius: 0.75rem;
+
+:root {
+  padding: 2vmax;
+  overflow: auto;
+  cursor: url(https://cur.cursors-4u.net/nature/nat-10/nat997.cur), auto !important;
+}
+
+body {
+  font-family: "Archivo", Arial, Helvetica, sans-serif !important;
+}
+
+/* navigation bar */
+.navbar {
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: auto;
+  max-width: 90vw;
+  position: relative;
+  padding-bottom: 40px;
+  width: 100%;
+  gap: 2em;
+}
+
+nav {
+  align-items: center;
+  background-color: white;
+  border-radius: 0.75rem;
+  box-shadow: $container-shadow;
+  display: flex;
+  justify-content: center;
+  padding: 1.75em 1.5em 1.75em 1.5em;
+  position: relative;
+
+  a {
+    color: black;
+    display: inline-flex;
+    font-size: 0.85em;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.25s ease-in-out;
+    &:hover {
+      color: #55b0f0;
+      font-size: 0.95em;
+    }
+    &.active {
+      color: #2087d0;
+    }
+  }
+
+  ul {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: larger;
+    gap: 1.75em;
+    justify-content: center;
+    list-style: none;
+    line-height: 1.5%;
+    margin-bottom: 0;
+    padding-left: 0%;
+  }
+}
+
+
+/* profile icon */
+.profile-icon {
+  align-items: center;
+  background-color: white;
+  border-radius: 0.75rem;
+  box-shadow: $container-radius;
+  justify-content: center;
+  padding: 1em;
+  position: relative;
+}
+
+.profile-img {
+  background: none;
+  color: inherit;
+  border: 0;
+  padding: 0;
+  outline: inherit;
+}
+
+/* home page */
+.page-content {
+  text-align: center;
+  background-color: #f8f8f8d3;
+  border-radius: 0.75em;
+  max-width: 95vw;
+  max-height: 95vh;
+  margin: 0 auto;
+  padding: 0.5em;
+}

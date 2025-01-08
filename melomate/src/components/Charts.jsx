@@ -37,7 +37,7 @@ function Charts() {
 
   return (
     <div className="charts">
-        {listItems}
+        <h3>charts</h3>
     </div>);
 }
 
