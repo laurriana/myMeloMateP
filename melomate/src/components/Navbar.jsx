@@ -2,7 +2,6 @@ import { React, useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 
 function Navbar() {
-
   return (
     <div className="navbar">
       <nav>
@@ -34,16 +33,16 @@ function Navbar() {
 
         <div className="icon-open">
           <NavLink to="/profile">
-            <i class="bi bi-person-vcard-fill" />
+            <i class="bi bi-person-vcard-fill" /> profile
           </NavLink>
           <NavLink to="/mood-tracker">
-            <i class="bi bi-heart-pulse-fill" />
+            <i class="bi bi-heart-pulse-fill" /> mood tracker
           </NavLink>
           <NavLink to="/achievements">
-            <i class="bi bi-trophy-fill" />
+            <i class="bi bi-trophy-fill" /> achievements
           </NavLink>
           <NavLink to="/about">
-            <i class="bi bi-card-text" />
+            <i class="bi bi-card-text" /> about
           </NavLink>
         </div>
       </div>

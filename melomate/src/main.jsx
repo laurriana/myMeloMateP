@@ -1,8 +1,8 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-import {Navbar, Home, Charts, Layout } from "."
+import { Navbar, Home, Charts, Layout, Discover, MoodTracker, Achievements, Profile, Playlists, About, Journal } from "./index.jsx"
 
 
 const router = createBrowserRouter([
@@ -17,6 +17,34 @@ const router = createBrowserRouter([
       {
         path: "/charts",
         element: <Charts />,
+      },
+      {
+        path: "/discover",
+        element: <Discover />,
+      },
+      {
+        path: "/mood-tracker",
+        element: <MoodTracker />,
+      },
+      {
+        path: "/achievements",
+        element: <Achievements />,
+      },
+      {
+        path: "/profile",
+        element: <Profile />,
+      },
+      {
+        path: "/playlists",
+        element: <Playlists />,
+      },
+      {
+        path: "/about",
+        element: <About />,
+      },
+      {
+        path: "/journal",
+        element: <Journal />,
       },
     ],
     errorElement: (
