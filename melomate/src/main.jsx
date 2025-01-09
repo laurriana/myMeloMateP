@@ -2,24 +2,8 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 
-import Navbar from "./components/Navbar.jsx";
-import Home from "./components/Home.jsx";
-import Charts from "./components/Charts.jsx";
+import {Navbar, Home, Charts, Layout } from "."
 
-import "bootstrap/dist/css/bootstrap.css";
-import "bootstrap-icons/font/bootstrap-icons.css";
-import "./stylesheets/main.scss"
-
-function Layout() {
-  return (
-    <>
-      <Navbar />
-      <div className="page-content">
-        <Outlet />
-      </div>
-    </>
-  );
-}
 
 const router = createBrowserRouter([
   {

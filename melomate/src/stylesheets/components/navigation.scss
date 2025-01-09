@@ -1,57 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Didact+Gothic&family=MuseoModerno:ital,wght@0,100..900;1,100..900&family=Parkinsans:wght@300..800&display=swap");
+@import "/src/stylesheets/variables";
 
-$container-shadow: 0rem 0rem 0.875rem 0rem rgba(81, 117, 143, 0.4);
-$container-radius: 0.75rem;
-$smooth: all 0.25s ease-in-out;
-
-@keyframes open-animation {
-  0% {
-    opacity: 0;
-    transform: translateY(-15%);
-  }
-  100% {
-    opacity: 100;
-    transform: translateY(0%);
-  }
-}
-
-@keyframes close-animation {
-  0% {
-    opacity: 100;
-    transform: translateY(0%);
-  }
-  100% {
-    opacity: 0;
-    transform: translateY(-15%);
-  }
-}
-
-@keyframes wiggle {
-  0% {
-    transform: rotate(10deg);
-  }
-  25% {
-    transform: rotate(-3deg);
-  }
-  50% {
-    transform: rotate(5deg);
-  }
-  75% {
-    transform: rotate(0deg);
-  }
-}
-
-:root {
-  padding: 2vmax;
-  overflow: auto;
-  cursor: url(https://cur.cursors-4u.net/nature/nat-10/nat997.cur), auto !important;
-}
-
-body {
-  font-family: "Archivo", Arial, Helvetica, sans-serif !important;
-}
-
-/* navigation bar */
 .navbar {
   align-items: center;
   box-sizing: border-box;
@@ -89,6 +37,9 @@ nav {
     }
     &.active {
       color: #2087d0;
+    }
+    &.active:hover {
+      transition: none;
     }
   }
 
@@ -153,6 +104,7 @@ nav {
   i {
     color :#2087d0;
     opacity: 75%;
+    transform: scale(1em);
     transition: all 0.15s ease-in-out;
     &:hover {
       opacity: 100%;
@@ -161,7 +113,7 @@ nav {
 
 }
 
-input {
+.navbar input {
   cursor: pointer;
   position: absolute;
   z-index: 5;
@@ -186,15 +138,4 @@ input {
       color: #caa811;
     }
   }
-}
-
-/* home page */
-.page-content {
-  text-align: center;
-  background-color: #f8f8f8d3;
-  border-radius: 0.75em;
-  max-width: 95vw;
-  max-height: 95vh;
-  margin: 0 auto;
-  padding: 0.5em;
 }

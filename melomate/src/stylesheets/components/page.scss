@@ -1,0 +1,48 @@
+@use "/src/stylesheets/variables";
+
+@keyframes open-animation {
+  0% {
+    opacity: 0;
+    transform: translateY(-15%);
+  }
+  100% {
+    opacity: 100;
+    transform: translateY(0%);
+  }
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(8deg);
+  }
+  25% {
+    transform: rotate(-3deg);
+  }
+  50% {
+    transform: rotate(4deg);
+  }
+  75% {
+    transform: rotate(0deg);
+  }
+}
+
+:root {
+  padding: 2vmax;
+  overflow: auto;
+  cursor: url(https://cur.cursors-4u.net/nature/nat-10/nat997.cur), auto !important;
+}
+
+body {
+  font-family: "Archivo", Arial, Helvetica, sans-serif !important;
+}
+
+/* home page */
+.page-content {
+  text-align: center;
+  background-color: #f8f8f8d3;
+  border-radius: 0.75em;
+  max-width: 95vw;
+  max-height: 95vh;
+  margin: 0 auto;
+  padding: 0.5em;
+}
