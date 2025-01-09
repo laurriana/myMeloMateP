@@ -142,13 +142,14 @@ nav {
   padding: 0.5rem 1.5rem;
   box-shadow: $container-shadow;
   opacity: 0;
+  transform: translateY(-15%);
   top: 80px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  animation: close-animation 0.3s ease-out;
-
+  transition: all 0.3s ease-out;
+  
   i {
     color :#2087d0;
     opacity: 75%;
@@ -172,6 +173,7 @@ input {
   &:checked {
     ~ .icon-open {
       opacity: 1;
+      transform: translateY(0%);
       animation: open-animation 0.3s ease-in-out;
     }
     ~.icon-closed {
