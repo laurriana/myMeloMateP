@@ -1,6 +1,7 @@
 package laurriana.mymelomate.repository;
 
 import laurriana.mymelomate.model.Track;
+import org.springframework.data.domain.Limit;
 import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.List;
 
@@ -10,6 +11,7 @@ public interface TrackRepository extends JpaRepository<Track, Integer> {
     Track findFirstByOrderByPlaycountAscIdDesc();
 
     Track findTopByArtistNameContainsIgnoreCaseOrderByPlaycountDesc(String artist);
+    Track findTopByArtistId(int n);
 
     // list methods
     List<Track> findByAlbumId(int n);

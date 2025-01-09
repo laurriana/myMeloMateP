@@ -12,6 +12,7 @@ public interface AlbumRepository extends JpaRepository<Album, Integer> {
     Album findFirstByOrderByPlaycountAsc();
 
     Album findTopByArtistNameContainingIgnoreCaseOrderByPlaycountDesc(String artist);
+    Album findTopByArtistId(int n);
 
     // lists
     List<Album> findByArtistId(int n);

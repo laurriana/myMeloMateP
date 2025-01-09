@@ -5,6 +5,7 @@ import laurriana.mymelomate.model.Track;
 import laurriana.mymelomate.repository.TrackRepository;
 import laurriana.mymelomate.service.TrackService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Limit;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -48,6 +49,11 @@ public class TrackController {
         return repository.findTopByArtistNameContainsIgnoreCaseOrderByPlaycountDesc(artist);
     }
 
+    @GetMapping("/mostPlayed/{artist}")
+    public Track getTopArtistTrack(@PathVariable int artistId) {
+        return repository.findTopByArtistId(artistId);
+    }
+
     /* LIST METHODS */
     @GetMapping("/all/album/{id}")
     public List<Track> getTrackByAlbum(@PathVariable int id) {
@@ -71,7 +77,7 @@ public class TrackController {
     }
 
     @GetMapping("/all/playcount/greater/{playcount}")
-    public List<Track> getAllPlaycountGreaterEq(int playcount) {
+    public List<Track> getAllPlaycountGreaterEq(@PathVariable int playcount) {
         return repository.findTracksByPlaycountGreaterThanEqual(playcount);
     }
 
@@ -85,6 +91,11 @@ public class TrackController {
         return repository.findTracksByArtistNameContainsIgnoreCase(artist);
     }
 
+    @GetMapping("/all/artist/{artistId}")
+    public List<Track> getAllByArtistId(@PathVariable int artistId) {
+        return repository.findByArtistId(artistId);
+    }
+
     @GetMapping("/all/playcount")
     public List<Track> orderPlaycount() {
         return repository.findAllByOrderByPlaycountDesc();
@@ -95,6 +106,8 @@ public class TrackController {
         return repository.findAllByOrderById();
     }
 
+
+    // other CRUD methods
     @PostMapping("/create")
     public ResponseEntity<String> addTrack(@RequestBody Map<String, String> newTrack) {
         return service.createTrack(newTrack);

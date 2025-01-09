@@ -27,8 +27,8 @@ public class ArtistController {
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, String.format("Artist with ID %d not found", id)));
     }
 
-    @GetMapping("byName")
-    public Artist getArtistByName(String name) {
+    @GetMapping("name/{name}")
+    public Artist getArtistByName(@PathVariable String name) {
         return repository.findArtistByName(name);
     }
 
@@ -47,23 +47,23 @@ public class ArtistController {
         return repository.findAll();
     }
 
-    @GetMapping("/allByPlaycount")
-    public List<Artist> getByPlaycount(int playcount) {
+    @GetMapping("/all/playcount/{playcount}")
+    public List<Artist> getByPlaycount(@PathVariable int playcount) {
         return repository.findArtistByPlaycount(playcount);
     }
 
-    @GetMapping("/allPlaycountLess")
-    public List<Artist> getAllPlaycountLeq(int playcount) {
+    @GetMapping("/all/playcount/lower/{playcount}")
+    public List<Artist> getAllPlaycountLeq(@PathVariable int playcount) {
         return repository.findArtistByPlaycountLessThanEqual(playcount);
     }
 
-    @GetMapping("/allPlaycountGreater")
-    public List<Artist> getAllPlaycountGreaterEq(int playcount) {
+    @GetMapping("/all/playcount/greater/{playcount}")
+    public List<Artist> getAllPlaycountGreaterEq(@PathVariable int playcount) {
         return repository.findArtistByPlaycountGreaterThanEqual(playcount);
     }
 
-    @GetMapping("/allNameContains")
-    public List<Artist> getByName(String name) {
+    @GetMapping("/all/name/{name}")
+    public List<Artist> getByName(@PathVariable String name) {
         return repository.findArtistByNameContainingIgnoreCase(name);
     }
 
