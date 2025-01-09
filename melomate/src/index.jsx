@@ -1,4 +1,6 @@
 import { Outlet } from "react-router-dom";
+import { React, useState, useEffect } from "react";
+import axios from "axios";
 
 // components
 import Navbar from "./components/Navbar";
@@ -13,6 +15,7 @@ import MoodTracker from "./pages/MoodTracker";
 import Discover from "./pages/Discover";
 import Playlists from "./pages/Playlists";
 import Journal from "./pages/Journal"
+import { fetchTracks } from "./assets/data";
 
 // styles
 import "bootstrap/dist/css/bootstrap.css";
@@ -42,5 +45,6 @@ export {
     MoodTracker,
     Discover,
     Playlists,
-    Journal
+    Journal,
+    fetchTracks
 }

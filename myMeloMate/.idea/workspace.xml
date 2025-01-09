@@ -7,8 +7,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b6040b7f-a8ad-427e-a93f-349f351ea350" name="Changes" comment="touch-ups on fetch methods and normalized mappings throughout entities (now exposed via actuator)">
+    <list default="true" id="b6040b7f-a8ad-427e-a93f-349f351ea350" name="Changes" comment="removed ambiguous mappings">
       <change beforePath="$PROJECT_DIR$/../melomate/src/components/Navbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../melomate/src/components/Navbar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,15 +160,7 @@
       <workItem from="1736051902749" duration="5013000" />
       <workItem from="1736066695295" duration="4929000" />
       <workItem from="1736118437459" duration="15753000" />
-      <workItem from="1736406784646" duration="2867000" />
-    </task>
-    <task id="LOCAL-00005" summary="cleaned up and deployed">
-      <option name="closed" value="true" />
-      <created>1735623512560</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1735623512560</updated>
+      <workItem from="1736406784646" duration="3581000" />
     </task>
     <task id="LOCAL-00006" summary="re-ordered application.properties">
       <option name="closed" value="true" />
@@ -553,7 +546,15 @@
       <option name="project" value="LOCAL" />
       <updated>1736409638876</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="removed ambiguous mappings">
+      <option name="closed" value="true" />
+      <created>1736410211867</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1736410211867</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -578,7 +579,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="introduced delete method for artists" />
     <MESSAGE value="added collation for stable encoding" />
     <MESSAGE value="dropped and re-created database on home server" />
     <MESSAGE value="dropped and re-created database on home server (x2)" />
@@ -603,6 +603,7 @@
     <MESSAGE value="misplaced @JsonIdentityInfo annotation" />
     <MESSAGE value="major: improved track creation method, introduced artist update play count method, introduced track association to artist." />
     <MESSAGE value="touch-ups on fetch methods and normalized mappings throughout entities (now exposed via actuator)" />
-    <option name="LAST_COMMIT_MESSAGE" value="touch-ups on fetch methods and normalized mappings throughout entities (now exposed via actuator)" />
+    <MESSAGE value="removed ambiguous mappings" />
+    <option name="LAST_COMMIT_MESSAGE" value="removed ambiguous mappings" />
   </component>
 </project>

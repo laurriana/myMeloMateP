@@ -1,7 +1,14 @@
 import { React, useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 
 function Navbar() {
+  const [isChecked, setIsChecked] = useState(false);
+  const location = useLocation();
+
+  useEffect(() => {
+    setIsChecked(false)
+  }, [location])
+
   return (
     <div className="navbar">
       <nav>
@@ -26,7 +33,11 @@ function Navbar() {
 
       {/* profile section */}
       <div className="wrapper">
-        <input type="checkbox" />
+        <input 
+        type="checkbox" 
+        checked={isChecked}
+        onChange={() => setIsChecked(!isChecked)}
+        />
         <div className="icon-closed">
           <i class="bi bi-person-circle" />
         </div>
