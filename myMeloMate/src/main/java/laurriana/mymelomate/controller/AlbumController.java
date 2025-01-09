@@ -47,12 +47,12 @@ public class AlbumController {
     }
 
     // get top album by artist
-    @GetMapping("/mostPlayed/{artist}")
+    @GetMapping("/mostPlayed/artist/name/{artist}")
     public Album getTopArtistAlbum(@PathVariable String artist) {
         return repository.findTopByArtistNameContainingIgnoreCaseOrderByPlaycountDesc(artist);
     }
 
-    @GetMapping("/mostPlayed/{artistId}")
+    @GetMapping("/mostPlayed/artist/id/{artistId}")
     public Album getTopArtistAlbum(@PathVariable int artistId) {
         return repository.findTopByArtistId(artistId);
     }
@@ -88,13 +88,13 @@ public class AlbumController {
     }
 
     // get all albums by artist
-    @GetMapping("/all/artist/{artist}")
+    @GetMapping("/all/artist/name/{artist}")
     public List<Album> getAllByArtist(@PathVariable String artist) {
         return repository.findAlbumsByArtistNameContainsIgnoreCase(artist);
     }
 
     // get all albums by artist id
-    @GetMapping("/all/artist/{artistId}")
+    @GetMapping("/all/artist/id/{artistId}")
     public List<Album> getAllByArtist(@PathVariable int artistId) {
         return repository.findByArtistId(artistId);
     }

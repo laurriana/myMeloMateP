@@ -44,12 +44,12 @@ public class TrackController {
         return repository.findFirstByOrderByPlaycountAscIdDesc();
     }
 
-    @GetMapping("/mostPlayed/{artist}")
+    @GetMapping("/mostPlayed/artist/name/{artist}")
     public Track getTopArtistTrack(@PathVariable String artist) {
         return repository.findTopByArtistNameContainsIgnoreCaseOrderByPlaycountDesc(artist);
     }
 
-    @GetMapping("/mostPlayed/{artist}")
+    @GetMapping("/mostPlayed/artist/id/{artistId}")
     public Track getTopArtistTrack(@PathVariable int artistId) {
         return repository.findTopByArtistId(artistId);
     }
@@ -86,12 +86,12 @@ public class TrackController {
         return repository.findTracksByNameContainsIgnoreCase(name);
     }
 
-    @GetMapping("/all/artist/{artist}")
+    @GetMapping("/all/artist/name/{artist}")
     public List<Track> getAllByArtist(@PathVariable String artist) {
         return repository.findTracksByArtistNameContainsIgnoreCase(artist);
     }
 
-    @GetMapping("/all/artist/{artistId}")
+    @GetMapping("/all/artist/id/{artistId}")
     public List<Track> getAllByArtistId(@PathVariable int artistId) {
         return repository.findByArtistId(artistId);
     }

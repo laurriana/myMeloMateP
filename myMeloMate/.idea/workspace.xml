@@ -7,14 +7,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b6040b7f-a8ad-427e-a93f-349f351ea350" name="Changes" comment="improved deserialization">
+    <list default="true" id="b6040b7f-a8ad-427e-a93f-349f351ea350" name="Changes" comment="touch-ups on fetch methods and normalized mappings throughout entities (now exposed via actuator)">
       <change beforePath="$PROJECT_DIR$/../melomate/src/components/Navbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../melomate/src/components/Navbar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/laurriana/mymelomate/controller/AlbumController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/laurriana/mymelomate/controller/AlbumController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/laurriana/mymelomate/controller/ArtistController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/laurriana/mymelomate/controller/ArtistController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/laurriana/mymelomate/controller/TrackController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/laurriana/mymelomate/controller/TrackController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/laurriana/mymelomate/repository/AlbumRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/laurriana/mymelomate/repository/AlbumRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/laurriana/mymelomate/repository/TrackRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/laurriana/mymelomate/repository/TrackRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,15 +159,7 @@
       <workItem from="1736051902749" duration="5013000" />
       <workItem from="1736066695295" duration="4929000" />
       <workItem from="1736118437459" duration="15753000" />
-      <workItem from="1736406784646" duration="2544000" />
-    </task>
-    <task id="LOCAL-00004" summary="added cors mapping config file">
-      <option name="closed" value="true" />
-      <created>1735506663498</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1735506663498</updated>
+      <workItem from="1736406784646" duration="2867000" />
     </task>
     <task id="LOCAL-00005" summary="cleaned up and deployed">
       <option name="closed" value="true" />
@@ -559,7 +545,15 @@
       <option name="project" value="LOCAL" />
       <updated>1736242649795</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="touch-ups on fetch methods and normalized mappings throughout entities (now exposed via actuator)">
+      <option name="closed" value="true" />
+      <created>1736409638875</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1736409638876</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -584,7 +578,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="prettied toString method for Track" />
     <MESSAGE value="introduced delete method for artists" />
     <MESSAGE value="added collation for stable encoding" />
     <MESSAGE value="dropped and re-created database on home server" />
@@ -609,6 +602,7 @@
     <MESSAGE value="removed redundant albums." />
     <MESSAGE value="misplaced @JsonIdentityInfo annotation" />
     <MESSAGE value="major: improved track creation method, introduced artist update play count method, introduced track association to artist." />
-    <option name="LAST_COMMIT_MESSAGE" value="major: improved track creation method, introduced artist update play count method, introduced track association to artist." />
+    <MESSAGE value="touch-ups on fetch methods and normalized mappings throughout entities (now exposed via actuator)" />
+    <option name="LAST_COMMIT_MESSAGE" value="touch-ups on fetch methods and normalized mappings throughout entities (now exposed via actuator)" />
   </component>
 </project>
