@@ -21,7 +21,7 @@ nav {
   box-shadow: $container-shadow;
   display: flex;
   justify-content: center;
-  padding: 1.75em 1.5em 1.75em 1.5em;
+  padding: .5em 1.5em 1.75em 1.5em;
   position: relative;
 
   a {
@@ -83,7 +83,7 @@ nav {
 }
 
 .icon-open {
-  width: 10.15em;
+  width: 9rem;
   height: fit-content;
   border-radius: $container-radius;
   position: absolute;
@@ -114,6 +114,7 @@ nav {
     opacity: 75%;
     transition: $smooth;
     font-weight: 550;
+    margin-block: .15em;
     &:hover {
       opacity: 100%;
       color: $gold;

@@ -18,7 +18,6 @@ import Journal from "./pages/Journal"
 import { fetchTracks } from "./assets/data";
 
 // styles
-import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "./stylesheets/compiled.scss";
 
